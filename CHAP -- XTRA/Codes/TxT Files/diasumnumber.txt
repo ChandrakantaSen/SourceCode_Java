@@ -1,0 +1,12 @@
+Question:
+
+Write a Program in Java to input a number and check whether it is a Disarium Number or not.
+
+Note: A number will be called DISARIUM if sum of its digits powered with their respective position is equal to the original number.
+
+For example 135 is a DISARIUM
+(Workings 11+32+53 = 135, some other DISARIUM are 89, 175, 518 etc)
+
+
+
+Source: http://www.javaforschool.com/1929145-java-program-to-check-for-disarium-number/#ixzz3CsL1jpxE

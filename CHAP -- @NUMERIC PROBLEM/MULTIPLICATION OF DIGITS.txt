@@ -1,0 +1,17 @@
+import java.io.*;
+class abs
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+int n,m=1;
+System.out.println("Enter any number for which you want to find the multiplication of digits:");
+n=Integer.parseInt(br.readLine());
+do
+{
+m*=(n%10);
+n=n/10;
+}while(n>0);
+System.out.println("Multiplication of the digits="+m);
+}}
+ 

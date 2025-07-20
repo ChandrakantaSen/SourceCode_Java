@@ -1,0 +1,24 @@
+import java.awt.*;
+import java.applet.*;
+import java.util.*;
+public class fill8 extends Applet
+{
+Random t;
+public void paint(Graphics g)
+{
+t=new Random();
+int aheight=this.getSize().height;
+int awidth=this.getSize().width;
+int rheight=aheight/3;
+int rwidth=awidth/3;
+int rtop=(aheight-rheight)/2;
+int rleft=(awidth-rwidth)/2;
+g.fillRect(rleft,rtop,rwidth-1,rheight-1);
+  for(int i=0;i<10000;i++)
+ {
+ g.fillRect(rleft,rtop,rwidth,rheight);
+ g.clearRect (rleft, rtop,rwidth,rheight);
+}
+     
+    }    
+}

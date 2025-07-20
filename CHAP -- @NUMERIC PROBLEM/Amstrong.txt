@@ -1,0 +1,32 @@
+import java.io.*;
+class armstrong
+{
+	public static void main(String args[]) throws IOException
+	{
+		int n,r;
+		System.out.println("Enter Any Number : ");
+		BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+		n=Integer.parseInt(obj.readLine());
+	for(int i=100;i<=n;i++)
+	{
+	    int d=0;
+		while(n>0)
+		{
+		    r=n%10;
+			d=d+r*r*r;
+			n/=10;
+}			
+		if(d==i)
+		{
+	
+		System.out.println("Armstrong no.="+i);
+		}
+		//break;
+	
+	else
+	{
+  System.out.println("Not a Armstrong no.");
+}
+}
+}
+}

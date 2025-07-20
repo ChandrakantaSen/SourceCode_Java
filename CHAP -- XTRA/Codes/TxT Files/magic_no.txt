@@ -1,0 +1,41 @@
+import java.io.*;
+class MAGIC_NO
+{
+public static void maing(String args[])throws IOException
+{
+int i,j=0,k,s=0;
+BufferedReader news=new BufferedReader(new InputStreamReader(System.in));
+System.out.print("ENTER THE MAX. LIMIT:-->");
+int longs=Integer.parseInt(news.readLine());
+System.out.println();
+int a[]=new int[longs];
+for(i=0;i<longs;i++)
+{
+System.out.print("ENTER THE NUMBER:-->");
+a[i]=Integer.parseInt(news.readLine());
+j=0;
+s=0;
+k=a[i];
+while(a[i]>0)
+{
+j=a[i]%10;
+s=s+j;
+a[i]=a[i]/10;
+    }
+if(s==10 || s==1)
+
+System.out.println("MAGIC NUMBERS ARE:-->"+k);
+    
+    else
+    
+System.out.println("not MAGIC NUMBERS ARE:-->"+k);
+    
+s=0;
+    }
+
+    }
+}
+    
+
+
+    

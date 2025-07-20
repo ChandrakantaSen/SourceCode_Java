@@ -1,0 +1,19 @@
+import java.io.*;
+class divide5
+{ 
+public static void main(String args[])throws IOException
+{
+int a;
+BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+System.out.println("Enter the no. to be check whether the no. is divisible by 7&8 both or not");
+a=Integer.parseInt(br.readLine());
+if((a%7==0)&&(a%8==0))
+{
+System.out.println(a+"is divisible by both 7&8");
+    }
+    else
+    {
+System.out.println(a+"is not divisible by both 7&8");
+    }
+}
+    }

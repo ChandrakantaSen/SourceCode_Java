@@ -1,0 +1,10 @@
+record no.: 1
+code:       01
+name:       dev
+designation: manager
+basic salary:50000
+record no.: 2
+code:       02
+name:       deepak
+designation: maneger
+basic salary:900

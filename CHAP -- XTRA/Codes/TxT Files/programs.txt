@@ -1,0 +1,43 @@
+1. Wap to calculate the charge the parcel sent from delhi to kolkata the weight of the parcel as input --
+                 RATE                                         CHARGE 
+          upto      10 kg                                    Rs 20/-  kg  
+          for next  20 kg                                    Rs 10/-  kg 
+          for next  20 kg                                    Rs 8/-   kg
+          more than 50 kg                                    Rs 5 per kg 
+
+2. Wap a program to accept length and breath of the rectangle and calculate the area , perimeter , daigonal according to the user choice using Switch case .
+
+3. WAP a menu driven program to accept a number and  check weather its a palindrome or a perfect number .
+
+4. wap a menu driven program to calculate ---
+a.the terms of the series 0,3,8,15,24,......n terms (take input as n )
+b.the sum of the series 1/2 + 3/4 + 5/6 + 7/8 + .......19/20
+
+5.wap to print first fifty prime numbers.
+6.wap a program to print the following pattern --
+
+  ***
+   **
+    *
+
+7.wap to print the following pattern 
+    
+  1  
+  01
+  101
+  0101
+  10101
+
+8.define a class salary as given below 
+DATA MEMBERS
+name 
+address 
+phone number 
+subject 
+specialisation
+monthly salary 
+income tax
+
+member method : accept () ; to accept the detaills of a teacher 
+                display () ; to diplay the details 
+                calculate () to computer the annuual incomme tax at 50% of the annual salary above 3 lakhs

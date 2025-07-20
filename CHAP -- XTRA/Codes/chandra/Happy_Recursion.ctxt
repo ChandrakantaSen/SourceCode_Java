@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Happy_Recursion()
+comment1.params=
+comment1.target=void\ main()
+comment2.params=nn
+comment2.target=void\ getnum(int)
+comment3.params=
+comment3.target=void\ ishappy()
+comment4.params=x
+comment4.target=int\ sum_sq_digits(int)
+numComments=5

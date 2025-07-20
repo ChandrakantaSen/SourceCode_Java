@@ -1,0 +1,30 @@
+import java.io.*;
+class area
+{
+	private double length;
+	private double breath;
+	void get_data(double x,double y)
+	{
+		length=x;
+		breath =y;
+	}
+	double show_area()
+	{
+		return(length*breath);
+	}
+}
+class area_of_rectangle 
+{
+	public static void main(String args[]) throws IOException
+	{
+		area obj = new area();
+		BufferedReader obj1 = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Enter Length : ");
+		double l=Float.parseFloat(obj1.readLine());
+		System.out.print("Enter Breath : ");
+		double b =Float.parseFloat(obj1.readLine());
+		obj.get_data(l,b);
+		double a=obj.show_area();
+		System.out.println("Area of Rectangle = "+a);
+	}	
+}

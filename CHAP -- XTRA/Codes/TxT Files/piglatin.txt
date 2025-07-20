@@ -1,0 +1,32 @@
+import java.io.*;
+
+/**
+ *
+ * @sudipta saha 
+
+ */
+import java.io.*;
+public class Piglatin 
+{
+ public static void main(String[] args)throws IOException 
+    {
+        BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(" Enter the String ");
+        String s=br.readLine();
+        int i=0;
+        int l=s.length();
+        s=s.toLowerCase();
+        for( i=0;i<l;i++)
+        {
+            char ch=s.charAt(i);
+            if(ch=='a'|| ch=='u'|| ch=='i'|| ch=='o'||ch=='u')
+                 break;
+          
+        }
+        String s1=s.substring(i,l);
+        String s2=s.substring(0,i);
+        String s3=s1+s2+"AY";
+        
+        System.out.println("Piglatin Word"+s3);
+    }
+}

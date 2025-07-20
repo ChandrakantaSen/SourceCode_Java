@@ -1,0 +1,357 @@
+
+
+Statistics Tutorial: Probability Distributions
+To understand probability distributions, it is important to understand variables. random variables, and some notation. 
+
+A variable is a symbol (A, B, x, y, etc.) that can take on any of a specified set of values. 
+When the value of a variable is the outcome of a statistical experiment, that variable is a random variable. 
+Generally, statisticians use a capital letter to represent a random variable and a lower-case letter, to represent one of its values. For example, 
+
+X represents the random variable X. 
+P(X) represents the probability of X. 
+P(X = x) refers to the probability that the random variable X is equal to a particular value, denoted by x. As an example, P(X = 1) refers to the probability that the random variable X is equal to 1. 
+Probability Distributions
+An example will make clear the relationship between random variables and probability distributions. Suppose you flip a coin two times. This simple statistical experiment can have four possible outcomes: HH, HT, TH, and TT. Now, let the variable X represent the number of Heads that result from this experiment. The variable X can take on the values 0, 1, or 2. In this example, X is a random variable; because its value is determined by the outcome of a statistical experiment. 
+
+A probability distribution is a table or an equation that links each outcome of a statistical experiment with its probability of occurence. Consider the coin flip experiment described above. The table below, which associates each outcome with its probability, is an example of a probability distribution. 
+
+Number of heads  Probability 
+0  0.25 
+1  0.50 
+2  0.25 
+
+The above table represents the probability distribution of the random variable X. 
+
+Cumulative Probability Distributions
+A cumulative probability refers to the probability that the value of a random variable falls within a specified range. 
+
+Let us return to the coin flip experiment. If we flip a coin two times, we might ask: What is the probability that the coin flips would result in one or fewer heads? The answer would be a cumulative probability. It would be the probability that the coin flip experiment results in zero heads plus the probability that the experiment results in one head. 
+
+P(X < 1) = P(X = 0) + P(X = 1) = 0.25 + 0.50 = 0.75
+
+Like a probability distribution, a cumulative probability distribution can be represented by a table or an equation. In the table below, the cumulative probability refers to the probability than the random variable X is less than or equal to x. 
+
+Number of heads: x  Probability: P(X = x)  Cumulative Probability: P(X < x) 
+0  0.25 0.25 
+1  0.50 0.75 
+2  0.25 1.00 
+
+
+
+Uniform Probability Distribution
+The simplest probability distribution occurs when all of the values of a random variable occur with equal probability. This probability distribution is called the uniform distribution. 
+
+Uniform Distribution. Suppose the random variable X can assume k different values. Suppose also that the P(X = xk) is constant. Then, 
+P(X = xk) = 1/k 
+
+
+
+Example 1
+
+Suppose a die is tossed. What is the probability that the die will land on 6 ? 
+
+Solution: When a die is tossed, there are 6 possible outcomes represented by: S = { 1, 2, 3, 4, 5, 6 }. Each possible outcome is a random variable (X), and each outcome is equally likely to occur. Thus, we have a uniform distribution. Therefore, the P(X = 6) = 1/6. 
+
+
+
+Example 2
+
+Suppose we repeat the dice tossing experiment described in Example 1. This time, we ask what is the probability that the die will land on a number that is smaller than 5 ? 
+
+Solution: When a die is tossed, there are 6 possible outcomes represented by: S = { 1, 2, 3, 4, 5, 6 }. Each possible outcome is equally likely to occur. Thus, we have a uniform distribution. 
+
+This problem involves a cumulative probability. The probability that the die will land on a number smaller than 5 is equal to: 
+
+P( X < 5 ) = P(X = 1) + P(X = 2) + P(X = 3) + P(X = 4) = 1/6 + 1/6 + 1/6 + 1/6 = 2/3
+
+
+
+Statistics Tutorial:
+Discrete and Continuous Probability Distributions
+If a variable can take on any value between two specified values, it is called a continuous variable; otherwise, it is called a discrete variable. 
+
+Some examples will clarify the difference between discrete and continuous variables. 
+
+Suppose the fire department mandates that all fire fighters must weigh between 150 and 250 pounds. The weight of a fire fighter would be an example of a continuous variable; since a fire fighter's weight could take on any value between 150 and 250 pounds. 
+
+
+Suppose we flip a coin and count the number of heads. The number of heads could be any integer value between 0 and plus infinity. However, it could not be any number between 0 and plus infinity. We could not, for example, get 2.5 heads. Therefore, the number of heads must be a discrete variable. 
+Just like variables, probability distributions can be classified as discrete or continuous. 
+
+Discrete Probability Distributions
+If a random variable is a discrete variable, its probability distribution is called a discrete probability distribution. 
+
+An example will make this clear. Suppose you flip a coin two times. This simple statistical experiment can have four possible outcomes: HH, HT, TH, and TT. Now, let the random variable X represent the number of Heads that result from this experiment. The random variable X can only take on the values 0, 1, or 2, so it is a discrete random variable. 
+
+The probability distribution for this statistical experiment appears below. 
+
+Number of heads  Probability 
+0  0.25 
+1  0.50 
+2  0.25 
+
+The above table represents a discrete probability distribution because it relates each value of a discrete random variable with its probability of occurrence. In subsequent lessons, we will cover the following discrete probability distributions. 
+
+Binomial probability distribution 
+Hypergeometric probability distribution 
+Multinomial probability distribution 
+Poisson probability distribution 
+Note: With a discrete probability distribution, each possible value of the discrete random variable can be associated with a non-zero probability. Thus, a discrete probability distribution can always be presented in tabular form.
+
+Continuous Probability Distributions
+If a random variable is a continuous variable, its probability distribution is called a continuous probability distribution. 
+
+A continuous probability distribution differs from a discrete probability distribution in several ways. 
+
+The probability that a continuous random variable will assume a particular value is zero. 
+As a result, a continuous probability distribution cannot be expressed in tabular form. 
+Instead, an equation or formula is used to describe a continuous probability distribution. 
+Most often, the equation used to describe a continuous probability distribution is called a probability density function. Sometimes, it is referred to as a density function, a PDF, or a pdf. For a continuous probability distribution, the density function has the following properties: 
+
+Since the continuous random variable is defined over a continuous range of values (called the domain of the variable), the graph of the density function will also be continuous over that range. 
+The area bounded by the curve of the density function and the x-axis is equal to 1, when computed over the domain of the variable. 
+The probability that a random variable assumes a value between a and b is equal to the area under the density function bounded by a and b. 
+For example, consider the probability density function shown in the graph below. Suppose we wanted to know the probability that the random variable X was less than or equal to a. The probability that X is less than or equal to a is equal to the area under the curve bounded by a and minus infinity - as indicated by the shaded area. 
+
+ 
+Note: The shaded area in the graph represents the probability that the random variable X is less than or equal to a. This is a cumulative probability. However, the probability that X is exactly equal to a would be zero. A continuous random variable can take on an infinite number of values. The probability that it will equal a specific value (such as a) is always zero. 
+
+In subsequent lessons, we will cover the following continuous probability distributions. 
+
+Normal probability distribution 
+Student's t distribution 
+Chi-square distribution 
+F distribution 
+
+Statistics Tutorial: Binomial Distribution
+To understand binomial distributions and binomial probability, it helps to understand binomial experiments and some associated notation; so we cover those topics first. 
+
+Binomial Experiment
+A binomial experiment (also known as a Bernoulli trial) is a statistical experiment that has the following properties: 
+
+The experiment consists of n repeated trials. 
+Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure. 
+The probability of success, denoted by P, is the same on every trial. 
+The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials. 
+Consider the following statistical experiment. You flip a coin 2 times and count the number of times the coin lands on heads. This is a binomial experiment because: 
+
+The experiment consists of repeated trials. We flip a coin 2 times. 
+Each trial can result in just two possible outcomes - heads or tails. 
+The probability of success is constant - 0.5 on every trial. 
+The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials. 
+Notation
+The following notation is helpful, when we talk about binomial probability. 
+
+x: The number of successes that result from the binomial experiment. 
+n: The number of trials in the binomial experiment. 
+P: The probability of success on an individual trial. 
+Q: The probability of failure on an individual trial. (This is equal to 1 - P.) 
+b(x; n, P): Binomial probability - the probability that an n-trial binomial experiment results in exactly x successes, when the probability of success on an individual trial is P. 
+nCr: The number of combinations of n things, taken r at a time. 
+Binomial Distribution
+A binomial random variable is the number of successes x in n repeated trials of a binomial experiment. The probability distribution of a binomial random variable is called a binomial distribution (also known as a Bernoulli distribution). 
+
+Suppose we flip a coin two times and count the number of heads (successes). The binomial random variable is the number of heads, which can take on values of 0, 1, or 2. The binomial distribution is presented below. 
+
+Number of heads  Probability 
+0  0.25 
+1  0.50 
+2  0.25 
+
+The binomial distribution has the following properties: 
+
+The mean of the distribution (µx) is equal to n * P . 
+The variance (s2x) is n * P * ( 1 - P ). 
+The standard deviation (sx) is sqrt[ n * P * ( 1 - P ) ]. 
+Binomial Probability
+The binomial probability refers to the probability that a binomial experiment results in exactly x successes. For example, in the above table, we see that the binomial probability of getting exactly one head in two coin flips is 0.50. 
+
+Given x, n, and P, we can compute the binomial probability based on the following formula: 
+
+Binomial Formula. Suppose a binomial experiment consists of n trials and results in x successes. If the probability of success on an individual trial is P, then the binomial probability is: 
+b(x; n, P) = nCx * Px * (1 - P)n - x 
+
+
+
+Example 1
+
+Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours? 
+
+Solution: This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. Therefore, the binomial probability is: 
+
+b(2; 5, 0.167) = 5C2 * (0.167)2 * (0.833)3 
+b(2; 5, 0.167) = 0.161 
+
+Cumulative Binomial Probability
+A cumulative binomial probability refers to the probability that the binomial random variable falls within a specified range (e.g., is greater than or equal to a stated lower limit and less than or equal to a stated upper limit). 
+
+For example, we might be interested in the cumulative binomial probability of obtaining 45 or fewer heads in 100 tosses of a coin (see Example 1 below). This would be the sum of all these individual binomial probabilities. 
+
+b(x < 45; 100, 0.5) = 
+b(x = 0; 100, 0.5) + b(x = 1; 100, 0.5) + ... + b(x = 44; 100, 0.5) + b(x = 45; 100, 0.5) 
+
+
+Example 1
+
+What is the probability of obtaining 45 or fewer heads in 100 tosses of a coin? 
+
+Solution: To solve this problem, we compute 46 individual probabilities, using the binomial formula. The sum of all these probabilities is the answer we seek. Thus, 
+
+b(x < 45; 100, 0.5) = b(x = 0; 100, 0.5) + b(x = 1; 100, 0.5) + . . . + b(x = 45; 100, 0.5) 
+b(x < 45; 100, 0.5) = 0.184 
+
+
+
+Example 2
+
+The probability that a student is accepted to a prestigeous college is 0.3. If 5 students from the same school apply, what is the probability that at most 2 are accepted? 
+
+Solution: To solve this problem, we compute 3 individual probabilities, using the binomial formula. The sum of all these probabilities is the answer we seek. Thus, 
+
+b(x < 2; 5, 0.3) = b(x = 0; 5, 0.3) + b(x = 1; 5, 0.3) + b(x = 2; 5, 0.3)
+b(x < 2; 5, 0.3) = 0.1681 + 0.3601 + 0.3087 
+b(x < 2; 5, 0.3) = 0.8369 
+
+
+
+Example 3
+
+What is the probability that the world series will last 4 games? 5 games? 6 games? 7 games? Assume that the teams are evenly matched. 
+
+Solution: This is a very tricky application of the binomial distribution. If you can follow the logic of this solution, you have a good understanding of the material covered in the tutorial, to this point. 
+
+In the world series, there are two baseball teams. The series ends when the winning team wins 4 games. Therefore, we define a success as a win by the team that ultimately becomes the world series champion. 
+
+For the purpose of this analysis, we assume that the teams are evenly matched. Therefore, the probability that a particular team wins a particular game is 0.5. 
+
+Let's look first at the simplest case. What is the probability that the series lasts only 4 games. This can occur if one team wins the first 4 games. The probability of the National League team winning 4 games in a row is: 
+
+b(4; 4, 0.5) = 4C4 * (0.5)4 * (0.5)0 = 0.0625 
+
+Similarly, when we compute the probability of the American League team winning 4 games in a row, we find that it is also 0.0625. Therefore, probability that the series ends in four games would be 0.0625 + 0.0625 = 0.125; since the series would end if either the American or National League team won 4 games in a row. 
+
+Now let's tackle the question of finding probability that the world series ends in 5 games. The trick in finding this solution is to recognize that the series can only end in 5 games, if one team has won 3 out of the first 4 games. So let's first find the probability that the American League team wins exactly 3 of the first 4 games. 
+
+b(3; 4, 0.5) = 4C3 * (0.5)3 * (0.5)1 = 0.25 
+
+Okay, here comes some more tricky stuff, so listen up. Given that the American League team has won 3 of the first 4 games, the American League team has a 50/50 chance of winning the fifth game to end the series. Therefore, the probability of the American League team winning the series in 5 games is 0.25 * 0.50 = 0.125. Since the National League team could also win the series in 5 games, the probability that the series ends in 5 games would be 0.125 + 0.125 = 0.25.
+
+The rest of the problem would be solved in the same way. You should find that the probability of the series ending in 6 games is 0.3125; and the probability of the series ending in 7 games is also 0.3125. 
+
+While this is statistically correct in theory, over the years the actual world series has turned out differently, with more series than expected lasting 7 games. For an interesting discussion of why world series reality differs from theory, see Ben Stein's explanation of why 7-game world series are more common than expected. 
+
+
+
+
+
+Statistics Tutorial:
+Negative Binomial and Geometric Distributions
+In this lesson, we cover the negative binomial distribution and the geometric distribution. As we will see, the geometric distribution is a special case of the negative binomial distribution. 
+
+Negative Binomial Experiment
+A negative binomial experiment is a statistical experiment that has the following properties: 
+
+The experiment consists of x repeated trials. 
+Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure. 
+The probability of success, denoted by P, is the same on every trial. 
+The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials. 
+The experiment continues until r successes are observed, where r is specified in advance. 
+Consider the following statistical experiment. You flip a coin repeatedly and count the number of times the coin lands on heads. You continue flipping the coin until it has landed 5 times on heads. This is a negative binomial experiment because: 
+
+The experiment consists of repeated trials. We flip a coin repeatedly until it has landed 5 times on heads. 
+Each trial can result in just two possible outcomes - heads or tails. 
+The probability of success is constant - 0.5 on every trial. 
+The trials are independent; that is, getting heads on one trial does not affect whether we get heads on other trials. 
+The experiment continues until a fixed number of successes have occurred; in this case, 5 heads. 
+Notation
+The following notation is helpful, when we talk about negative binomial probability. 
+
+x: The number of trials required to produce r successes in a negative binomial experiment. 
+r: The number of successes in the negative binomial experiment. 
+P: The probability of success on an individual trial. 
+Q: The probability of failure on an individual trial. (This is equal to 1 - P.) 
+b*(x; r, P): Negative binomial probability - the probability that an x-trial negative binomial experiment results in the rth success on the xth trial, when the probability of success on an individual trial is P. 
+nCr: The number of combinations of n things, taken r at a time. 
+Negative Binomial Distribution
+A negative binomial random variable is the number X of repeated trials to produce r successes in a negative binomial experiment. The probability distribution of a negative binomial random variable is called a negative binomial distribution. The negative binomial distribution is also known as the Pascal distribution. 
+
+Suppose we flip a coin repeatedly and count the number of heads (successes). If we continue flipping the coin until it has landed 2 times on heads, we are conducting a negative binomial experiment. The negative binomial random variable is the number of coin flips required to achieve 2 heads. In this example, the number of coin flips is a random variable that can take on any integer value between 2 and plus infinity. The negative binomial probability distribution for this example is presented below. 
+
+Number of coin flips  Probability 
+2  0.25 
+3  0.25 
+4  0.1875 
+5  0.125 
+6  0.078125 
+7 or more  0.109375 
+
+
+Negative Binomial Probability
+The negative binomial probability refers to the probability that a negative binomial experiment results in r - 1 successes after trial x - 1 and r successes after trial x. For example, in the above table, we see that the negative binomial probability of getting the second head on the sixth flip of the coin is 0.078125. 
+
+Given x, r, and P, we can compute the negative binomial probability based on the following formula: 
+
+Negative Binomial Formula. Suppose a negative binomial experiment consists of x trials and results in r successes. If the probability of success on an individual trial is P, then the negative binomial probability is: 
+b*(x; r, P) = x-1Cr-1 * Pr * (1 - P)x - r 
+
+
+
+The Mean of the Negative Binomial Distribution
+If we define the mean of the negative binomial distribution as the average number of trials required to produce r successes, then the mean is equal to: 
+
+µ = r / P 
+
+where µ is the mean number of trials, r is the number of successes, and P is the probability of a success on any given trial.
+
+As if statistics weren't challenging enough, the above definition is not the only definition for the mean of the negative binomial distribution. Some texts define the mean of the negative binomial distribution as the average number of failures that result when a binomial experiment produces r successes. Given this definition, the mean is equal to:
+
+µ = rQ / P 
+
+where µ is the mean number of failures, r is the number of successes, P is the probability of a success on any given trial, and Q is the probability of failure.
+
+The moral: If someone talks about the mean of a negative binomial distribution, find out how they are defining the term.
+
+Geometric Distribution
+The geometric distribution is a special case of the negative binomial distribution. It deals with the number of trials required for a single success. Thus, the geometric distribution is negative binomial distribution where the number of successes (r) is equal to 1. 
+
+An example of a geometric distribution would be tossing a coin until it lands on heads. We might ask: What is the probability that the first head occurs on the third flip? That probability is referred to as a geometric probability and is denoted by g(x; P). The formula for geometric probability is given below. 
+
+Geometric Probability Formula. Suppose a negative binomial experiment consists of x trials and results in one success. If the probability of success on an individual trial is P, then the geometric probability is: 
+g(x; P) = P * Qx - 1 
+
+
+Example 1 
+
+Bob is a high school basketball player. He is a 70% free throw shooter. That means his probability of making a free throw is 0.70. During the season, what is the probability that Bob makes his third free throw on his fifth shot? 
+
+Solution: This is an example of a negative binomial experiment. The probability of success (P) is 0.70, the number of trials (x) is 5, and the number of successes (r) is 3. 
+
+To solve this problem, we enter these values into the negative binomial formula. 
+
+b*(x; r, P) = x-1Cr-1 * Pr * Qx - r 
+b*(5; 3, 0.7) = 4C2 * 0.73 * 0.32 
+b*(5; 3, 0.7) = 6 * 0.343 * 0.09 = 0.18522 
+
+Thus, the probability that Bob will make his third successful free throw on his fifth shot is 0.18522.
+
+
+
+Example 2 
+
+Let's reconsider the above problem from Example 1. This time, we'll ask a slightly different question: What is the probability that Bob makes his first free throw on his fifth shot? 
+
+Solution: This is an example of a geometric distribution, which is a special case of a negative binomial distribution. Therefore, this problem can be solved using the negative binomial formula or the geometric formula. We demonstrate each approach below, beginning with the negative binomial formula. 
+
+The probability of success (P) is 0.70, the number of trials (x) is 5, and the number of successes (r) is 1. We enter these values into the negative binomial formula. 
+
+b*(x; r, P) = x-1Cr-1 * Pr * Qx - r 
+b*(5; 1, 0.7) = 4C0 * 0.71 * 0.34 
+b*(5; 3, 0.7) = 0.00567 
+
+Now, we demonstate a solution based on the geometric formula.
+
+g(x; P) = P * Qx - 1 
+g(5; 0.7) = 0.7 * 0.34 = 0.00567 
+
+
+

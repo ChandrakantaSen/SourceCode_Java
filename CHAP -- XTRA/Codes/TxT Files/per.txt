@@ -1,0 +1,28 @@
+import java.io.*;
+public class PERFECT_NUMBER
+{
+public static void main(String args[])throws IOException
+{
+int i,j,r,sum=0;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.print("GIVE THE RANGE PLEASE!");
+int y=Integer.parseInt(br.readLine());
+System.out.println("THE PERFECT NUMBER UPTO "+y+":");
+int x[]=new int[y];
+for(i=1;i<=y;i++)
+{
+for(j=2;j<=i;j++)
+{
+if(i%j==0)
+{
+sum=sum+j;
+}
+if(j==i-1)
+if(sum==i)
+System.out.println("THE PERFECT NUMBERS ARE"+sum+",");
+}    
+sum=1;
+}
+}
+}
+

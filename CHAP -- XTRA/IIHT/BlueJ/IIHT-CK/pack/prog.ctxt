@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=prog
+comment1.params=
+comment1.target=void\ sum()
+comment1.text=prog(int\ x,int\ y)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ a\=x;\r\n\ \ \ \ \ \ \ \ b\=y;\r\n}
+numComments=2

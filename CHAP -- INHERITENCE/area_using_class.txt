@@ -1,0 +1,39 @@
+// area of a retangle using class and object
+class area
+{
+	private double a;
+	private double b;
+	area(double x,double y)
+	{
+		a=x;
+		b=y;
+	}
+    double show_area()
+	{
+		return(a*b);
+	}
+}
+class derived_area extends area
+{
+	private double c;
+
+	derived_area(double p,double q,double r)
+	{
+		super(p,q);
+		c=r;
+	}
+	double total_show()
+	{
+		return (show_area()*c);
+	}
+}
+class area_using_class
+{
+   public	static void main(String args[])
+	{
+		derived_area obj=new derived_area(2.0,7.0,3.0);
+		double ar = obj.total_show();
+		System.out.println("the Area is ="+ar);
+	}
+
+}

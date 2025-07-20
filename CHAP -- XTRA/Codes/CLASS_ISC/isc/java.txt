@@ -1,0 +1,33 @@
+Question:
+
+The input in this question will consist of a number of lines of English text consisting of the letters of the English alphabets, the punctuation marks (‘) apostrophe, (.) full stop, (,) comma , (;) semicolon , (:) colon and white space. Write a program to print the words of the input in reverse order without any punctuation marks other than blanks.
+
+For example, Consider the following input text:
+
+INPUT:
+Enter number of sentences: 2
+Enter the sentences:
+This is a sample piece of text to illustrate this question
+if you are smart you will solve this right.
+
+OUTPUT: right this solve will you smart are you if question this illustrate to text of piece sample a is this
+
+NOTE : Individual words (i.e. characters of every word) are not reversed
+
+Test your program for the following data and some random data:
+
+Sample Input 1 :
+Enter number of sentences: 1
+Enter the text:
+Do not judge a book by its cover.
+
+Sample Output: Cover its by book a judge not do
+
+Sample Input 2:
+Enter number of sentences: 2
+Enter the text:
+Emotions, controlled and directed to work, is character.
+By Swami Vivekananda.
+
+Sample Output: Vivekananda Swami By character is work to dedicated and controlled Emotions
+

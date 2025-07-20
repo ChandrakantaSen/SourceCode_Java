@@ -1,0 +1,30 @@
+import java.io.*;
+class selection1
+{
+public static void main() throws IOException
+{
+InputStreamReader inp=new InputStreamReader(System.in);
+BufferedReader red=new BufferedReader(inp);
+System.out.println("enter 4 digit number");
+int w=Integer.parseInt(red.readLine());
+int e=w/1000;
+int r=w%1000;
+int y=r/100;
+int u=r%100;
+int d=u/10;
+int o=u%10;
+int a[]={e,d,y,o},s=0 ;
+for(int z=0;z<3;z++)
+{
+for(int h=z+1;h<4;h++)
+{
+if(a[z]<a[h])
+{
+s=a[z];
+a[z]=a[h];
+a[h]=s;
+}}}
+for(int i=0;i<4;i++)
+{
+System.out.print(" "+a[i]);
+}}}

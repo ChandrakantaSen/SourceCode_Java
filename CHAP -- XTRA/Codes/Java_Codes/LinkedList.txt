@@ -1,0 +1,562 @@
+import java.lang.*;
+import java.util.*;
+
+public class Node
+{
+   Node data;
+   node next;
+}
+
+public class SinglyLinkeList
+{
+   Node start;
+   int size;
+}
+
+ public SinnglyLinkedList()
+{
+  start=null;
+  size=0;
+}
+
+
+
+public void add(Node data)
+{
+   if(size=0)
+   {
+      start=new Node();
+      start.next=null;
+      start.data=data;
+   }
+   else
+   {
+      Node currentnode=getnode(size-1);
+      Node newnode=new Node();
+      newnode.data=data;
+      newnode.next=null;
+      currentnode.next=newnode;
+   }
+   size++;
+  }
+
+  public void insertfront(Node data)
+   {
+     if(size==0)
+    {
+      Node newnode=new Node();
+      start.next=null;
+      start.data=data;
+    }
+    else        
+    {
+        Node newnode=new Node();
+         newnode.data=data;
+        newnode.next=start;
+   }
+   size++;
+  }
+
+   public void insertAt(int position,Node data)
+   {
+      if(position==0)
+      {
+        insertatfront(Node data);
+       }
+       else if(position==size-1)
+      {
+        insertatlast(data);
+      }
+       else
+      {
+         Node tempnode=getNodeAt(position-1);
+         Node newnode= new Node();
+         newnode.data=data;
+         newnode.next=tempnode.next;
+         size++;
+      }
+   }
+
+ public Node getFirst()
+ {
+    return getNodeAt(0);
+ }
+  public Node getLast()
+  {
+     return getNodeAt(size-1);
+  } 
+  public Node removeAtFirst()
+  {
+     if(size==0)
+     {
+        System.out.println("Empty List ");
+     } 
+     else
+     {
+         Node tempnode=getNodeAt(position-1);
+         Node data=tempnode.next.data;
+         tempnode.next=tempnode.next.next;
+         size--;
+           return data;
+     }
+ }
+
+      Node data=start.data;
+      start=start.next;
+      size--;
+      return data;
+  }
+ }
+ public Node removeAtLast()
+ {
+   if(size==0)
+   {
+      System.out.println("Empty List ");
+   }
+   else
+   {
+       Node data=getNodeAt(size-1);
+       Node data=tempnode.next.data;
+       size--;
+       return data;
+   }
+}
+
+   public string void main(string[] args)
+  {
+
+    LinkedList l1=new LinkedList();
+    BufferReader bf=new BufferReader(new InputStreamReader(Sysyem.in));
+    System.out.println("1->Add Element 2->Remove Last 3->Insert Front 4->Insert at        position 5->REmove Front 6-> Remove At Last 7->Exit ");
+string choice;
+choice.readline();
+int choiceNum= Integer.parseInt(choice);
+string str;
+switch(choiceNum)
+{
+    case 1: System.out.println("Enter the element to be inserted ");
+        str =bf.readline();
+        l1.add(str);
+        break;
+
+    case 2: System.out.println("Linked List before removing element : "+l1);
+        System.out.println("Linked List after removing element  : ");
+        l1.removeLast();
+        break;
+
+    case 3: System.out.println("Linked List before inserting element at first: "+l1);
+        System.out.println("Enter the element to be inserted at first: ");
+        str.readline(); 
+        l1.insertfront(str);
+        System.out.println("Linked List after inserting at first : "+l1);
+        break;
+
+    case 4: System.out.println("Linked List before inserting element at particular position: "+l1);
+        System.out.println("Enter the element position & element : ");
+        str.readline();
+        string str1;
+        str1.readline();
+        l1.insertAt(str,str1);
+        System.out.println("Linked List after inserting at particular Position :"+l1);
+        break;
+
+    case 5: System.out.println("Linked LIst before removing front element: "+l1);
+        System.out.println("Linked List after removing front element : ");
+        l1.removeAtFirst();
+        break;
+
+    case 6: System.out.println("Linked List before removing last element: "+l1);
+        System.out.println("Linked List after removing last element :");
+        l1.removeAtLast();
+
+    default:break;
+    }
+   }
+   }
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Method to Traverse a Single Linked List :
+
+If the class definition of a linked list is:
+
+class Node
+{
+int data;
+Node link;
+}
+
+Then the method for traversal will be:
+
+void traversal(Node start)
+{
+Node ptr = new Node(); //creating a temporary object
+ptr = start; //referring it to the first list (start node) of the linked list
+while(ptr.link != null)
+{
+
+/* process ptr.data here */
+
+ptr = ptr.link;
+}
+}
+
+Examples:
+
+Example 1:
+
+[ISC 2013] : A linked list is formed from the objects of the class:
+
+class Node
+{
+int item;
+Node next;
+}
+
+Write an Algorithm OR a Method to count the number of nodes in the linked list.
+The method declaration is given below:
+int count(Node ptr_start)
+
+Solution:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+int count(Node ptr_start)
+{
+int c=0;
+Node ptr = new Node();
+ptr = ptr_start;
+while(ptr.link != null)
+{
+c++;
+ptr = ptr.next;
+}
+return c;
+}
+Example 2:
+
+[ISC 2012] : A linked list is formed from the objects of the class:
+
+class node
+{
+int p;
+String n;
+node next;
+}
+
+Write an Algorithm OR a Method to search for a name and display the contents of that node.
+The method declaration is given below:
+void search(node start, String b)
+
+Solution:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+void search(node start, String b)
+{
+int f=0;
+node ptr = new node();
+ptr = start;
+while(ptr.link != null)
+{
+if(b.equalsIgnoreCase(ptr.n))
+{
+f=1;
+System.out.println("Content of the node  = " + ptr.p);
+}
+ptr = ptr.next;
+}
+if(f==0)
+System.out.println("Name not found");
+}
+Example 3:
+
+[ISC 2010] : A linked list is formed from the objects of the class:
+
+class ListNodes
+{
+int item;
+ListNodes next;
+}
+
+Write an Algorithm OR a Method to compute and return the sum of all integer items stored in the linked list.
+The method declaration is given below:
+int listsum(ListNodes start)
+
+Solution:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+int listsum(ListNodes start)
+{
+int sum=0;
+ListNodes ptr = new ListNodes();
+ptr = start;
+while(ptr.link != null)
+{
+sum = sum + ptr.item;
+ptr = ptr.next;
+}
+return sum;
+}
+Example 4:
+
+A linked list is formed from the objects of the class:
+
+class Node
+{
+int data;
+Node link;
+}
+
+Write an Algorithm OR a Method to search for a value in a linked list.
+The method declaration is given below:
+void search(Node start, int value)
+
+Solution:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+void search(Node start, int value)
+{
+int f=0;
+Node ptr = new Node();
+ptr = start;
+while(ptr.link != null)
+{
+if(ptr.data == value)
+{
+f=1;
+}
+ptr = ptr.next;
+}
+if(f == 1)
+System.out.println("Search is Successful");
+else
+System.out.println("Search is Unsuccessful");
+}
+Example 5:
+
+A linked list is formed from the objects of the class:
+
+class Node
+{
+int data;
+Node link;
+}
+
+Write an Algorithm OR a Method to display all the data in a linked list.
+The method declaration is given below:
+void display(Node start)
+
+Solution:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+void display(Node start)
+{
+Node ptr = new Node();
+ptr = start;
+System.out.println("Data in the linked list are: ");
+while(ptr.link != null)
+{
+System.out.println(ptr.data);
+ptr = ptr.next;
+}
+}
+Method to insert (add) a node in the beginning of a Linked List :
+
+In the below code, ‘start’ denotes the start node and ‘x’ denotes the value to be inserted in the new node:
+
+1
+2
+3
+4
+5
+6
+7
+void insertBeginning(Node start, int x)
+{
+    Node temp = new Node();
+    temp.data = x;
+    temp.link = start;
+    start = temp;
+}
+Method to insert (add) a node after ‘n’ nodes in a Linked List :
+
+In the below code, ‘start’ denotes the start node, ‘x’ denotes the value to be inserted in the new node and ‘n’ denotes the number of nodes after which the new node is to be added:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+void insertMiddle(Node start, int x, int n)
+{
+    Node temp = new Node();
+    temp.data = x;
+    Node ptr = new Node();
+    ptr = start;
+     
+    int c = 0;
+    while(c <= n) //'ptr' will access all nodes up to the nth node
+    {
+        ptr = ptr.link;
+        c++;
+    }
+     
+    temp.link = ptr.link;
+    ptr.link = temp;
+}
+Method to insert (add) a node at the end of a Linked List :
+
+In the below code, ‘start’ denotes the start node and ‘x’ denotes the value to be inserted in the new node:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+void insertEnd(Node start, int x)
+{
+    Node temp = new Node();
+    temp.data = x;
+    Node ptr = new Node();
+    ptr = start;
+     
+    while(ptr.link != null) //'ptr' will access all nodes up to the last node
+    {
+        ptr = ptr.link;
+    }
+     
+    temp.link = null;
+    ptr.link = temp;
+}
+Method to delete (remove) a node after ‘n’ nodes in a Linked List :
+
+In the below code, ‘start’ denotes the start node and ‘n’ denotes the number of nodes after which the node is to be added:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+void deleteNode(Node start, int n)
+{
+    Node ptr = new Node(); //'ptr' is the node which will be deleted
+    Node ptr1 = new Node(); //'ptr1' is the node just before the node to be deleted
+    ptr = start;
+    ptr1 = ptr;
+     
+    int c = 0;
+    while(c <= n)
+    {
+        ptr1 = ptr;
+        ptr = ptr.link;
+        c++;
+    }
+     
+    ptr1.link = ptr.link;
+    ptr.link = null;
+}
+
+

@@ -1,0 +1,53 @@
+//maximum and minimum number from array
+import java.io.*;
+
+class maxmin
+{
+	public static void main(String ar[])throws Exception
+	{
+		int arr[]=new int[10];
+		int p;
+BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+		System .out .println("Please Enter The ten Nos As Below:: ");
+		for(int i=0;i<10;i++)
+		{
+			System.out.print("Enter No: ");
+			arr[i]=Integer.parseInt(in.readLine());
+                  
+		}
+		for(int i=0;i<10;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		for(int i=0;i<10;i++)
+		{                                                
+			for(int j=1;j<=10;j++)
+			{    
+				if(arr[i]>arr[j])
+				{                                                          
+					p=arr[j];
+					arr[j]=arr[i];
+					arr[i]=p;
+				}
+			}
+
+		}
+		System.out.print("The  Maximum No Is, Among The Above Taken Numbers="+arr[0]+" "+"\n");
+		for(int i=0;i<10;i++)
+		{
+			for(int j=0;j<10;j++)
+			{
+                                                   
+				if(arr[i]<arr[j])
+				{                                                         
+					p=arr[j];
+					arr[j]=arr[i];
+					arr[i]=p;
+				}
+
+                                                               
+			}
+		}
+		System.out.println("The  Minimum No Is, Among The Above Taken Numbers="+arr[0]+" "+"\n");
+	}
+}

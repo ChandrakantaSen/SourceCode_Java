@@ -1,0 +1,41 @@
+Question:
+
+A super class Detail has been defined to store the details of a customer. Define a subclass Bill to compute the monthly telephone charge of the customer as per the chart given below:
+Number Of Calls
+1 – 100
+101 – 200
+201 – 300
+Above 300
+
+Rate
+Only Rental charge
+60 paisa per call + rental charge
+80 paisa per call + rental charge
+1 rupee per call + rental charge
+
+The details of both the classes are given below:
+
+Class Name : Detail
+
+Data members / Instance variables:
+name : to store the name of the customer.
+address : to store the address of the customer.
+telno : to store the phone number of the customer.
+rent : to store the monthly rental charge
+
+Member functions:
+Detail(…) : parameterized constructor to assign values to data members.
+void show() : to display the detail of the customer.
+
+Class Name : Bill
+
+Data members / Instance variables:
+n : to store the number of calls.
+amt : to store the amount to be paid by the customer.
+
+Member functions:
+Bill(…) : parameterized constructor to assign values to data members of both classes and to initialize amt = 0.0.
+void cal() : calculates the monthly telephone charge as per the charge given above.
+void show() : to display the detail of the customer and amount to be paid.
+
+Specify the class Detail giving details of the constructor( ) and void show(). Using the concept of inheritance, specify the class Bill giving details of the constructor( ), void cal() and void show().

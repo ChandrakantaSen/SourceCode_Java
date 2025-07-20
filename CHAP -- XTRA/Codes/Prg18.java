@@ -1,0 +1,32 @@
+import java.io.*;
+class Prg18
+{
+public static void main(String args[])throws IOException
+{
+String s;
+int i,l,j,k,flag=0,fr=0;
+BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
+System.out.println("Enter any sentence:-");
+s=br.readLine();
+l=s.length();
+System.out.println("Characters \t Frequency");
+for(i=0;i<l;i++)
+{
+for(j=0;j<l;j++)
+if(s.charAt(i)==s.charAt(j))
+fr=fr+1;
+for(j=i-1;j>=0;j--)
+if(s.charAt(i)==s.charAt(j))
+flag=1;
+if(flag!=1)
+{
+if((s.charAt(i)=='B')||(s.charAt(i)=='b')||(s.charAt(i)=='C')||(s.charAt(i)=='c')||(s.charAt(i)=='D')||(s.charAt(i)=='d')||(s.charAt(i)=='F')||(s.charAt(i)=='f')||(s.charAt(i)=='G')||(s.charAt(i)=='g')||(s.charAt(i)=='H')||(s.charAt(i)=='h')||(s.charAt(i)=='J')||(s.charAt(i)=='j')||(s.charAt(i)=='K')||(s.charAt(i)=='k')||(s.charAt(i)=='L')||(s.charAt(i)=='l')||(s.charAt(i)=='M')||(s.charAt(i)=='m')||(s.charAt(i)=='N')||(s.charAt(i)=='n')||(s.charAt(i)=='P')||(s.charAt(i)=='p')||(s.charAt(i)=='Q')||(s.charAt(i)=='q')||(s.charAt(i)=='R')||(s.charAt(i)=='r')||(s.charAt(i)=='S')||(s.charAt(i)=='s')||(s.charAt(i)=='T')||(s.charAt(i)=='t')||(s.charAt(i)=='V')||(s.charAt(i)=='v')||((s.charAt(i)=='W')||(s.charAt(i)=='w')||(s.charAt(i)=='X')||(s.charAt(i)=='x')||(s.charAt(i)=='Y')||(s.charAt(i)=='y')||(s.charAt(i)=='Z')||(s.charAt(i)=='z')))
+{
+System.out.println(s.charAt(i)+"\t\t"+fr);
+    }
+}
+fr=0;
+flag=0;
+    }
+}
+    }

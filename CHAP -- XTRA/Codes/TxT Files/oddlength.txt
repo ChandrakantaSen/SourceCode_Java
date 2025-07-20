@@ -1,0 +1,44 @@
+// author: sudipta saha
+
+import java.io.*;
+public class oddlenghtString {
+
+   
+       public static void main(String args[])throws IOException
+         {
+        String word=" ",rev=" ";
+        BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(" Enter the String");
+        
+        String s=br.readLine();
+        s=s+" ";
+        for(int i=0;i<s.length();i++)
+        {
+            char ch=s.charAt(i);
+            if(ch!=' ')
+            {
+                word=word+ch;
+                continue;
+            
+        }
+            word=word.trim();
+            int l1=word.length();
+             
+            if(l1%2==1)
+            {
+                for(int j=l1-1;j>=0;j--)
+                {
+                    rev=rev+word.charAt(j);
+                    
+                    
+                }
+                System.out.print(rev);
+                    
+                    
+            }
+    rev=" ";
+    word=" ";
+        }
+        
+}
+}

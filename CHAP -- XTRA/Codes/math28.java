@@ -1,0 +1,14 @@
+import java.io.*;
+public class math28
+
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+double a,b;
+System.out.println("enter the number to find out the aquare root:-");
+a=Integer.parseInt(br.readLine());
+b=Math.sqrt(a);
+System.out.println("The square root of "+a+" is"+b);
+}
+}

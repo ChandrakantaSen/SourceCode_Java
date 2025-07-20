@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ init()
+comment0.text=init\ is\ the\ first\ function\ called\ in\ a\ Java\ applet.
+comment1.params=g
+comment1.target=void\ paint(java.awt.Graphics)
+comment1.text=\ the\ paint\ function\ is\ called\ whenever\ the\ window\ needs\r\n\ \ \ to\ be\ updated;\ the\ repaint()\ statement\ also\ calls\ this\r\n\ \ \ function.\ \ Here,\ we\ use\ it\ to\ draw\ the\ msg\ string\ at\r\nthe\ coordinates\ specified\ by\ the\ pos\ and\ yLoc\ variables.
+comment2.params=
+comment2.target=void\ run()
+comment2.text=\ t.start()\ calls\ the\ run()\ function.\ \ Here,\ the\ while\ loop\r\n\ \ \ will\ iterate\ continuously;\ each\ iteration\ will\ repaint\ the\r\n\ \ \ applet\ (drawing\ the\ string\ five\ pixels\ to\ the\ left\ of\ its\r\n\ \ \ previous\ location),\ and\ pause\ for\ 100\ milliseconds.\ \ If\ the\r\n\ \ \ complete\ string\ has\ scrolled\ off\ to\ the\ left\ side\ of\ the\ applet\ \r\n\ \ \ window\ (pos\ <\=\ -msgWidth),\ reposition\ the\ string\ to\ the\ \r\nright\ side\ of\ the\ applet\ window.
+numComments=3

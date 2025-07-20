@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>StringProblems</label>
+	</settings>
+	<users>
+		<user>
+			<path>StringProblems.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>ArrayProblems\ArrayProblems.jcp</path>
+		</project>
+		<project>
+			<path>Constructor\Constructor.jcp</path>
+		</project>
+		<project>
+			<path>StringProblems.jcp</path>
+		</project>
+	</projects>
+</workspace>

@@ -1,0 +1,29 @@
+import java.io.*;
+class pallin
+{
+public static void main(String args[])throws IOException
+{
+InputStreamReader ir=new InputStreamReader(System.in);
+BufferedReader br= new BufferedReader(ir);
+String s;
+int l;
+System.out.println("enter a sentence");
+s=br.readLine();
+l=s.length();
+String rev=new String(" ");
+for(int i=l-1;i>=0;i--)
+{
+rev=rev+s.charAt(i);
+     }
+System.out.println(rev);
+        
+if(s.compareTo(rev)==0)
+{
+System.out.println("pallindrome");
+     }    
+   else
+   System.out.println("non pallindrome" );
+}
+    }
+
+    

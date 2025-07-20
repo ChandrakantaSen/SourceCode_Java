@@ -1,0 +1,18 @@
+import java.io.*;
+
+
+class name
+{
+public static void main(String args[])  throws IOException
+{
+BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+String dn[]={"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
+System.out.println("enter a day number(1-7)");
+
+int n=Integer.parseInt(br.readLine());
+if(n>=1&&n<=7)
+System.out.println("day name is"+'\t'+dn[n-1]);
+else
+System.out.println("invalid number");
+}
+}

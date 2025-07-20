@@ -1,0 +1,30 @@
+import java.io.*;
+class word_freq
+{
+    public static void main(String args[])throws IOException
+    {
+        InputStreamReader ir= new InputStreamReader(System.in);
+        BufferedReader br= new BufferedReader(ir);
+        String n,s,k;
+        int p=0,d=0;
+        System.out.println(" enter a sentence");
+        n=br.readLine();
+        System.out.println(" enter the word whose frequency you want :");
+        s=br.readLine();
+        int l=n.length();
+        n=n.concat(" ");
+        for(int i=0;i<l;i++)
+        {
+            if(n.charAt(i)==' ' )
+            {
+                k=n.substring(p,i);
+                p=i+1;
+                if(k.equals(s))
+                    d++;
+                else if(k.compareTo(s)==0)
+                    d++;
+            }
+        }
+        System.out.println(s+ " "+"----"+" "+d); 
+    }
+}

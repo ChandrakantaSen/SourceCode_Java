@@ -1,0 +1,31 @@
+ANSWER ALL QUESTIONS:--------------                                                                     
+1.Write a programme to enter 10 values and disply it ascending ordrer using bubble sorting technique and search a data using binary search technique:-                                                                               15
+2.Write a programme to enter 3*3 order matrix and display it in atranspose form:-                                                                      10
+3.Write a programme to enter 3*3 order matrix and display the sum of main diagonal and right daiagonal and also print the sum of each row and column elements:-                                                                15
+4.Predict the output:-------                                              5*2=10
+a) int x[]={-5,-4,-4,-3,-2,-1};
+    for(int i=3;i<5;i++)
+    System.out.println(x[i]+ " " );
+b) string x[3]={"object","oriented","programms",};
+     for(int y=0;y<3;y++)
+     System.out.println(x[y]+ " ");
+c)  double x[]={2.93,4.65,3.12,9.0,6};  
+      for(int s=0;s<=4;s=s+1)
+      {
+         x[s]+=5;
+       }
+       System.out.println(x[s]);
+d)  double x[]=new double[5];
+      for(int s=0;y<5;y++)
+      {
+         x[j]=y;
+        System.out.println(x[j]);   
+        }
+e)    int a[]={20,30,40,50};
+       for(int i=0;i<4;i++)
+       {
+         if(a[i] %4==0)
+           {
+          System.out.println(a[i]);
+            }
+       }   

@@ -1,0 +1,40 @@
+/* 4. TO COPY A STRING TO ANOTHER USING LIBRARY FUNCTION strcpy(). */
+
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+char a[50],b[50];
+clrscr();
+	printf("\n Enter a string: ");
+	gets(a);
+	strcpy(b,a);
+	printf("\n String after copying: ");
+	puts(b);
+	printf("\n String before copying: ");
+	puts(a);
+getch();
+}
+ 
+
+
+/* 6. TO CONCATENATE TWO STRINGS USING LIBRARY FUNCTION strcat(). */
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+char a[20],b[20];
+clrscr();
+	printf("\n Enter first string : ");
+	gets(a);
+	printf("\n Enter second string : ");
+	gets(b);
+	strcat(a," ");
+	strcat(a,b);
+	printf("\n Concatenated string is: %s",a);
+getch();
+}
+ 

@@ -1,0 +1,47 @@
+
+Do you have a github project? We are building a list of PHP based projects.
+So if you have one visit this link to submit your project.
+Rate this snippet
+
+4 votes
+2,451 views
+20 downloads
+Author: maswid
+Posted: October 21st 2013
+
+Did this snippet help you out? If so send this person some money!
+php email regex - validating email address using regular expression — by maswid
+10 Best Law cases in history (TopTipsNews)
+1
+description
+Validating email address using regular expression. This Regex can be used to search email addresses on text that produce list of emails in array, and also match email format from HTML form input.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+<?php
+
+$regex = "/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i";
+
+// usage
+
+if(!preg_match($regex, $email)) {
+    echo "Invalid email address";
+}
+else {
+    echo "email is valid";
+}
+
+?>

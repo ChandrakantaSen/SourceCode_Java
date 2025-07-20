@@ -1,0 +1,28 @@
+import java.io.*;
+
+class name_rev
+{
+public static void main(String args[])throws IOException
+{String b=" ",d=" ",k=" ";
+InputStreamReader ir =new InputStreamReader(System.in);
+BufferedReader br= new BufferedReader(ir);
+String s;
+System.out.println(" enter your name");
+s=br.readLine();
+int j=s.length();
+for(int i=0;i<j;i++)
+{
+int p=0 ;
+s=s.concat(" ");
+if(s.charAt(i)==' ')
+{
+b=s.substring(p,i);
+d=s.substring(i);
+k=d+" "+b;
+p=i+1;
+    }
+}
+ 
+System.out.println(k);
+    
+}}

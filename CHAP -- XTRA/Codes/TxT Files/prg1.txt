@@ -1,0 +1,24 @@
+import java.io.*;
+class prg1
+{
+public static void main(String args[])throws IOException
+{
+int a,b,c,d,e;
+
+double f;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter first number");
+a=Integer.parseInt(br.readLine());
+System.out.println("enter second number");
+b=Integer.parseInt(br.readLine());
+System.out.println("enter third number");
+c=Integer.parseInt(br.readLine());
+System.out.println("enter fourth number");
+d=Integer.parseInt(br.readLine());
+e=a*b*c*d;    
+f=(a+b+c+d)/4;
+System.out.println("multiplication result is"+'\t'+e);
+System.out.println("average is=     "+f);
+}
+}
+

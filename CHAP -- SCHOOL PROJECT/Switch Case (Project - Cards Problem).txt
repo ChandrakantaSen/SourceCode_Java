@@ -1,0 +1,81 @@
+class ab
+{
+    public static void main()
+    {
+        int i,d,p=0;String a1="",z="";
+        System.out.println("CARD NO.\tDENOMINATION\n");
+        for(i=1;i<=10;i++)
+        {
+            d=(int)((Math.random()*52)+1);
+            if (d>=1 && d<=13)
+            {
+                a1="SPADE";
+            }
+            else if(d>=14 && d<=26)
+            {
+                a1="HEART";
+            }
+            else if(d>=27 && d<=39)
+            {
+                a1="DIAMOND";
+            }
+            else if(d>=40 && d<=52)
+            {
+                a1="CLUB";
+            }            
+            switch(d)
+                {
+                    case 1:case 14:case 27:case 40:
+                    z="ACE of "+a1;break;
+                    case 2:case 3:case 4:case 5:case 6:case 7:
+                    case 8:case 9:case 10:case 15:case 16:case 17:
+                    case 18:case 19:case 20:case 21:case 22:case 23:
+                    case 28:case 29:case 30:case 31:case 32:case 33:
+                    case 34:case 35:case 36:case 41:case 42:case 43:
+                    case 44: case 45:case 46:case 47:case 48:case 49:
+                    if(d>1 && d<11)
+                    {
+                        p=d;
+                        z=" of "+a1;
+                    }
+                    else if(d>14 && d<24)
+                    {
+                        p=d-13;
+                        z=" of "+a1;
+                    }
+                    else if(d>27 && d<37)
+                    {
+                        p=d-26;
+                        z=" of "+a1;
+                    }
+                    else if(d>40 && d<50)
+                    {
+                        p=d-39;
+                        z=" of "+a1;
+                    }
+                    break;
+                    case 11:case 24:case 37:case 50:
+                    z="JACK of "+a1;
+                    break;
+                    case 12:case 25:case 38:case 51:
+                    z="QUEEN of "+a1;
+                    break;
+                    case 13:case 26:case 39:case 52:
+                    z="KING of "+a1;
+                    break;
+                }
+                if((d==1)||(d==14)||(d==27)||(d==40))   
+                System.out.println(d+"\t\t"+" "+z);
+                else if((d==11)||(d==24)||(d==37)||(d==50))   
+                System.out.println(d+"\t\t"+" "+z);
+                else if((d==12)||(d==25)||(d==38)||(d==51))   
+                System.out.println(d+"\t\t"+" "+z);
+                else if ((d==13)||(d==26)||(d==39)||(d==52))
+                System.out.println(d+"\t\t"+" "+z);
+                else if (p>0)
+                System.out.println(d+"\t\t"+p+" "+z);
+                else
+                System.out.println(d+"\t\t"+z);
+            }
+        }
+    }

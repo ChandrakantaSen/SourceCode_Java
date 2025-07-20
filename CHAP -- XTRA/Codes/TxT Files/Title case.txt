@@ -1,0 +1,22 @@
+import java.io.*;
+class Title_case
+{
+	public static void main(String args[])  throws IOException
+	{
+		String name;
+		int i,n,c=0;
+		DataInputStream obj=new DataInputStream(System.in);
+		System.out.print("\nEnter string in Lower case: ");
+		name = obj.readLine();
+  		
+		n=name.length();
+		System.out.print((char)(name.charAt(0)-32));
+		for(i=1;i<n;i++)
+		{
+			if(name.charAt(i)!=' ' && name.charAt(i-1)==' ')
+				System.out.print((char)(name.charAt(i)-32));  		   		  		 	  
+			else
+				System.out.print(name.charAt(i));	  	  
+		}
+	}
+}  

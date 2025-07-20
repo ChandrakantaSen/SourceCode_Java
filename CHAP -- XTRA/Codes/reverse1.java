@@ -1,0 +1,17 @@
+import java.io.*;
+class reverse1   
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+int n,m,d,s=0;
+System.out.println("Enter the number to print the reverse of it ");
+n=Integer.parseInt(br.readLine());
+for(m=n;m>0;m=m/10)
+{
+d=m%10;
+s=s*10+d;
+    }
+System.out.println("The reverse of the number"+n+"is"+s);
+}
+}

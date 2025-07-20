@@ -1,0 +1,204 @@
+import java .io.*;
+class ANIMAL_KINGDOM
+{
+public void   main()throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+int count=0;int i=0;// Initialising the variables//
+System.out.println("ENTER THE NUMBER OF YOUR OPTION");
+System.out.println("1. PISCES");
+System.out.println("2. AMPHIBIAN");
+System.out.println("3. REPTILIA");
+System.out.println("4. AVES");
+System.out.println("5. MAMMALIA");
+System.out.println("6. QUESTION");
+System.out.println("7. EXIT");  
+i= Integer.parseInt(br.readLine());// To accept the entered choice/
+switch(i)
+
+{
+case 1:
+System.out.println("                                                    PISCES");
+System.out.println("*Pisces includes all fishes. They are completely adapted to aquatic life.Their body is completely covered with scales.");
+System.out.println("*They have a two-chambered heart,breathe by means of gills and are cold blooded(poikilothermal) ");
+System.out.println("*They have fins but no limbs.They are two main types-");
+System.out.println("*(a)Cartilagenous fishes, Examples-Sharks,dogfish,skates.");
+System.out.println("*(b)Bony fishes, Examples-Carps,Roaches,Herrings.");
+break;
+case 2:
+System.out.println("                                                  AMPHIBIA");
+System.out.println("*Amphibians live partly on land and partly in water.In early stages of life they breathe by means of gills but their adults breathe by means of lungs.");
+System.out.println("*They have a smooth,non scaly moist,slimy skin.The eardrum (Typanum)lies on the surface of the skin.");
+ System.out.println ("*They have five fingered(pentadactyl)limbs and a three-chambered heart.They are cold blooded.");
+System.out.println("*Examples-Frog,Toad,Salamander.");
+break;
+case 3:
+System.out.println("                                                REPTILIA");
+System.out.println ("*Reptiles are completely adapted to life in land.Their eggs have a leathery shell.They breathe by means of lungs right from birth.");
+System.out.println ("*They have rough, horny scales on the skin and a three-chambered heart in which the ventricle is partially divided.");
+System.out.println("*The eardrum (Typanum)lies at the bottom of a tubular depression and are cold blooded.");
+System.out.println("*Examples-Lizard,Snaker,Tortoise");
+break;
+case 4:
+System.out.println("                                                  AVES");
+System.out.println (" *Aves breathe by means of lungs .They have an exoskelton of feathers.");
+System.out.println (" *Their fore-limbs are modified into wings.They have scaly legs and a four-chambered heart.");
+System.out.println (" *Their body is streamlined and the skelton is light to facilitate flying.");
+System.out.println (" *Examples-Pigeon,Sparrow,Crow");
+break;
+case 5:
+System.out.println("                                                 MAMMALIA");
+System.out.println(" *Mammals  are the most highly developed animals for life on land, although some of them such as whales live in water and bats fly in air.  ");
+System.out.println(" *They give birth to living young ones.They suckle their young ones byn means of mammary glands.They have hair on their skin and are warm-blooded.");
+System.out.println(" *They have muscular diaphragm seperating the thorax and abdomen internally.They have four-chambered heart and breathe by means of lungs.");
+System.out.println(" *Examples-Bat,Monkey,Man ");
+break;
+case 6:
+
+System.out.println("(A)Which Class has Pentadactyl Limbs and has Smooth  and Slimy skin ?");
+System.out.println("1.REPTILIA");
+System.out.println("2.AMPHIBIA");
+System.out.println("3.AVES");
+int i1= Integer.parseInt(br.readLine());
+if(i1==2)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS AMPHIBIA ");
+System.out.println("(B)State the numbers of chambers of the heart of a salamander ?");
+System.out.println("1.3-CHAMBERED");
+System.out.println("2.2-CHAMBERED");
+System.out.println("3.NONE OF THE ABOVE");
+int i2= Integer.parseInt(br.readLine());
+if(i2==1)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS 3-CHAMBERED");
+System.out.println("(C)Aves have an exoskeleton made of ?");
+System.out.println("1.CHITIN");
+System.out.println("2.FEATHERS");
+System.out.println("3.SPONGIN FIBRES");
+int i3= Integer.parseInt(br.readLine());
+if(i3==2)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS FEATHERS");
+System.out.println("(D)In which class of vertebrates does the tympanum lie at the bottom of a tubular depression ?");
+System.out.println("1.REPTILIA");
+System.out.println("2.MAMMLIA");
+System.out.println("3.PISCES");
+
+int i4= Integer.parseInt(br.readLine());
+if(i4==1)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS REPTILIA");
+System.out.println("(E)  Herrings are example of ?");
+System.out.println("1.BONY FISH");
+System.out.println("2.NONE OF THE ABOVE");
+System.out.println("3.CARTILAGENOUS FISH");
+int i5= Integer.parseInt(br.readLine());
+if(i5==1)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS BONY FISH");   
+System.out.println("(F)  Reptiles are completely adapted to life ?");
+System.out.println("1.ON LAND");
+System.out.println("2.IN WATER");
+System.out.println("3.IN BOTH LAND AND WATER");
+int i6= Integer.parseInt(br.readLine());
+if(i6==1)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS ON LAND");
+System.out.println("(G)  Which class of vertebrate lay their eggs with a calcareous shell ?");
+System.out.println("1.REPTILIA");
+System.out.println("2.PISCES");
+System.out.println("3.AVES");
+int i7= Integer.parseInt(br.readLine());
+if(i7==3)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS AVES");
+System.out.println("(H)  Bats are example of?");
+System.out.println("1.AVES");
+System.out.println("2.REPTILIA");
+System.out.println("3.MAMMALIA");
+int i8= Integer.parseInt(br.readLine());
+if(i==3)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS MAMMALIA");
+System.out.println("(I)  They have diaphragm seperating the thorax and abdomen,breathe by means of lungs?");
+System.out.println("1.REPTILIA");
+System.out.println("2.AVES");
+System.out.println("3.MAMMALIA");
+int i9= Integer.parseInt(br.readLine());
+if(i9==3)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS MAMMALIA");
+System.out.println("(J)  Which class 'breathes by means of gills throughout their life and are poikilothermal'?");
+System.out.println("1.MAMMALIA");
+System.out.println("2.AMPHIBIA");
+System.out.println("3.PISCES");
+int i10= Integer.parseInt(br.readLine());
+if(i10==3)
+{
+System.out.println("CORRECT ANSWER");
+count=count+2;
+    }
+else
+System.out.println("WRONG ANSWER .THE CORRECT ANSWER IS AVES ");
+System.out.println("YOUR TOTAL SCORE IS "+count);
+if(count>=18)
+System.out.println("YOUR RESULT IS EXCELLENT");
+if(count>=16&&count<18)
+System.out.println("YOUR RESULT IS VREY GOOD");
+if(count>=12&&count<16)
+System.out.println("YOUR RESULT IS GOOD");
+if(count>=8&&count<12)
+System.out.println("YOUR RESULT IS SATISFACTORY");
+if(count<8)
+System.out.println("TRY HARDER");
+break;
+case 7:
+System.out.println("THANK YOU FOR VISITING OUR SITE");
+default :
+System.out.println("YOU HAVE ENTERED A WRONG CHOICE");
+}
+
+    }
+   }
+   
+
+
+
+
+

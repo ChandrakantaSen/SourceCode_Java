@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+Adding up two numbers - JSP Example 2
+</title>
+</head>
+<body>
+<h1>
+Adding up two numbers - JSP Example 2
+</h1>
+<p>
+
+<p>
+<table>
+<tr><td>Enter first number<td> <input type=text name="n1">
+<tr><td>Enter second number<td> <input type=text name="n2">
+<tr><td> <td><input type=submit value="Calculate sum">
+</table>
+</body>
+</html>
+
+
+<html>
+<head>
+<title>
+JSP Example 1
+</title>
+</head>
+<body>
+<h1>JSP Example 1<h1>
+<table>
+<tr><td bgcolor=black>
+<font color=white size=+3>
+<%= new java.util.Date() %>
+</font>
+</table>
+</body> 
+</html>

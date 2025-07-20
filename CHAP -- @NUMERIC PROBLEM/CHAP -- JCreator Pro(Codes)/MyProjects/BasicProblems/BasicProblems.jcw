@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>BasicProblems</label>
+	</settings>
+	<users>
+		<user>
+			<path>BasicProblems.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>BasicProblems.jcp</path>
+		</project>
+	</projects>
+</workspace>

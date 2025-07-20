@@ -1,0 +1,25 @@
+
+
+
+import java.io.*;
+class q5
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+int c=0,j=0;
+System.out.println("enter the number of years to be inputted");
+String x=br.readLine();
+int n=Integer.parseInt(x);
+int year[]=new int[n];
+for(int i=0;i<n;i++)
+{
+System.out.println("enter the year");
+String y=br.readLine();
+year[i]=Integer.parseInt(y);
+if(year[i]%4==0)
+j++;
+}
+System.out.println("no of leap year="+j);
+}
+}

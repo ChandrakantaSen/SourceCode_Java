@@ -1,0 +1,25 @@
+
+import java.io.*;
+class character_occurance
+{
+    public static void main(String args[]) throws IOException
+    {
+        BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+        char ch;
+        int i=0,count=0;
+        System.out.print("Enter any str  ");     	
+        str=obj.readLine();
+        System.out.print("Enter any Character :"); 	
+        ch=(char)obj.read();
+        do{
+            if(str.charAt(i)==ch) 
+            {
+                count++;
+            }
+            i++;
+        }while(i<str.length());
+        System.out.println("Number of occuration : "+count);
+    }
+
+}

@@ -1,0 +1,14 @@
+1.	Write a function MAKE-PALINDROME that makes a palindrome out of a list for e.g. (YOU AND ME) as input should return (YOU AND ME ME AND YOU)
+
+ 
+
+2.       Write a function FIRSTZERO that takes a list of three numbers as input and returns a word (one of  “first”, “second”, “third” or “none”) indicating where the first zero appears in the list.
+
+ 
+
+3.       Write a function to compute an hourly worker’s gross pay given an hourly wage and the number of hours he or she worked. Your function should prompt for each input it needs by printing a message and answer in English.
+
+ 
+
+4.       Write an iterative version of the MEMBER function, called ITMEMBER. It should return T if its first input appears in its second input, it need not return a sublist of its second input.
+

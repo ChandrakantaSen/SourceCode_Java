@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>Constructor</label>
+	</settings>
+	<users>
+		<user>
+			<path>Constructor.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Constructor.jcp</path>
+		</project>
+	</projects>
+</workspace>

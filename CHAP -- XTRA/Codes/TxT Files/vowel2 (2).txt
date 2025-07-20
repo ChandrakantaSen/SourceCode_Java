@@ -1,0 +1,37 @@
+import java.io.*;
+class vowel_count1
+{
+	public static void main(String args[]) throws IOException
+	{
+		String s;
+		char ch;
+		int vc=0,spl_ch=0;
+		BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter Any word    : ");  s=obj.readLine();
+		int l=s.length();
+		
+		for(int i=0;i<l;i++)
+		{
+			switch(s.charAt(i))
+			{
+				case 'A':
+				case 'E':
+				case 'I':
+				case 'O':
+				case 'U':
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
+			 		vc++; break;
+				
+				default:
+			    	spl_ch++;   			 
+			}		
+			
+		}
+		System.out.println("Number of Vowels = " +vc);
+		
+	}
+}

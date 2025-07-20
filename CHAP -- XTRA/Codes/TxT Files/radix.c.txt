@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<conio.h>
+void qsort(int a[],int,int);
+void partition(int a[],int,int,int *);
+void print(int *,int);
+void swap(int *,int *);
+
+void main()
+{
+  int a[30],i,n;
+  flushall();
+   clrscr();
+  printf("
+ enter how many data u want :");
+  scanf("%d",&n);
+
+  printf("
+ enter the data :");
+   for(i=0;i<n;i++)
+   {
+      printf("
+ %d .",i);
+      scanf("%d",&a[i]);
+   }
+    qsort(a,0,n-1);
+    printf("
+ SORTED DATA:
+");
+    print(a,n-1);
+   getch();
+}
+void qsort(int a[],int lb,int ub)
+ {
+   int j;
+   if(ub>lb)
+   {
+   partition(a,lb,ub,&j);
+   qsort(a,lb,j-2);
+   qsort(a,j+2,ub);
+   }
+ }
+void partition(int a[],int lb,int ub,int *j)
+{
+
+  int mid=(lb+ub)/2,temp,up,down,pivot;
+  pivot=a[mid];
+  up=ub;
+  down=lb;
+ while(down<up)
+ {
+     while( a[down] <= pivot && down <= ub )
+       {
+	 down++;
+	 if(a[down]<a[down-1]&&down>lb)
+	    swap(&a[down],&a[down-1]);
+	}
+      while(a[up]>pivot)
+       {
+	up--;
+	if(a[up]>a[up+1]&&up<ub)
+	 swap(&a[up],&a[up+1]);
+       }
+      if(down<up)
+      {
+	  swap(&a[down],&a[up]);
+      if(a[down]<a[down-1]&&down>0)
+	  swap(&a[down],&a[down-1]);
+      if(a[up]>a[up+1]&&up<ub)
+	  swap(&a[up],&a[up+1]);
+      }
+
+ }
+  for(int i=0;i<ub-1;i++)
+    if(a[i]>a[i+1])
+      swap(&a[i],&a[i+1]);
+  *j=up;
+}
+void print(int a[],int n)
+{
+  for(int i=0;i<=n;i++)
+     printf("
+%d   .   %d",i,a[i]);
+}
+void swap(int *p,int *q)
+{
+  int t;
+  t=*p;
+  *p=*q;
+  *q=t;
+}

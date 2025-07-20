@@ -1,0 +1,39 @@
+class twinprime
+     {
+         public static void main(int r)
+               {
+                   int i,k,j,l;
+                   for(i=2;i<=r-2;i++)
+                     {
+                      k=i;
+                      for(j=1;j<=2;j++)
+                         {
+                             for(l=2;l<=k/2;l++)
+                               {
+                                   if(k%l==0)
+                                break;
+                            }
+                            if(l>k/2)
+                             k=i+2;
+                             else
+                             break;
+                            }
+                            if(j>2)
+                            System.out.println(i+" and "+k);
+                            k=0;
+                        }
+                    }
+                }
+                
+                               
+                            
+                            
+                            
+                             
+                             
+                      
+                      
+                      
+                      
+                      
+         

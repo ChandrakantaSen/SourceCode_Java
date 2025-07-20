@@ -1,0 +1,23 @@
+clear
+echo "Current Time is: " `date +%r`
+h=`date +%H`
+m=`date +%M`
+s=`date +%S`
+echo "Hour is "$h
+echo "Minute is "$m
+echo "Seconds are "$s
+    case $h in
+        1)echo "ONE ";;
+        2)echo "TWO ";;
+        3)echo "THREE ";;
+        4)echo "FOUR ";;
+        5)echo "FIVE ";;
+        6)echo "SIX ";;
+        7)echo "SEVEN ";;
+        8)echo "EIGHT ";;
+        9)echo "NINE ";;
+        10)echo "TEN ";;
+        11)echo "ELEVEN ";;
+        12)echo "TWELVE ";;
+        *)echo "Invalid ";;
+    esac

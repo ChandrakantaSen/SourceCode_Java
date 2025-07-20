@@ -1,0 +1,276 @@
+//                      CLASS X PROJECT
+
+// AUTHOR-SAURAV JAIN
+  import java.io.*;
+  class pr //name of the class - project
+  {  //starting  of class
+  public static void main()throws IOException
+  {  //starting of main
+  InputStreamReader inp=new InputStreamReader(System.in);
+  BufferedReader r=new BufferedReader(inp);
+  int ch;
+  do{ //do while loop begins..........
+  System.out.println(); 
+  System.out.println("menu");//printing the menu....
+  System.out.println("1. print pattern");
+  System.out.println("2. print sum of the Series");
+  System.out.println("3. manupulate the strings");
+  System.out.println("4. exit");
+  System.out.println("enter your choice");
+  ch=Integer.parseInt(r.readLine());
+  switch(ch)//switch statement being created
+   { //starting of switch 
+   case 1:
+   pattern();
+   break;
+
+   case 2:
+   series();
+   break;
+
+   case 3:
+   string();
+   break;
+
+   case 4:
+   System.out.println("exiting the program");
+   return;
+
+   default:
+   System.out.println("wrong input");
+    } //end of switch.........
+   } // end of do while loop
+while(true);
+   } //end of main.........
+
+public static void pattern()//fuction of the patteren being created
+{ //start of fuction patteren
+   int i,j,c,k,n=4;
+     
+   c=n-1;
+        
+   for(i=1;i<=n;i++)
+    {
+    
+    for(k=1;k<=c;k++)
+     System.out.print(" ");
+        
+    for(j=1;j<=i;j++)
+     System.out.print(j);
+        
+    for(j=i-1;j>=1;j--)
+     System.out.print(j);
+     System.out.println();
+        
+    c=c-1;
+    }
+    
+    c=c+2;
+        
+     for(i=n-1;i>=1;i--)
+      { 
+          
+     for(k=1;k<=c;k++)
+      System.out.print(" ");
+        
+     for(j=1;j<=i;j++)
+      System.out.print(j);
+        
+     for(j=i-1;j>=1;j--)
+      System.out.print(j);
+      System.out.println();
+        
+     c=c+1;
+     }
+}// end of patteren
+
+public static void series()
+{ // start of fuction series
+   double x,f=1;
+   double s=0;
+    x=2;
+   for(int i=1;i<=6;i++)
+    {
+    
+         f=f*i;
+     if(i%2==0)
+      s=s-Math.pow(x,i)/f;
+     else
+      s=s+Math.pow(x,i)/f;
+     }
+    System.out.println("The sum of the series is..."+s);//printing the sum of the series
+}
+     
+public static void string()throws IOException
+{ //start of the string fuction............
+   InputStreamReader inp=new InputStreamReader(System.in);
+   BufferedReader r=new BufferedReader(inp);
+   System.out.println();
+   System.out.println("Menu...");//printing the menu............
+   System.out.println("1. reverse each word");
+   System.out.println("2. count the number of vowels and conconent and special characters");
+   System.out.println("3. print the longest word in the sentence");
+   System.out.println("4. print the word with maximum vowels");
+   System.out.println("5. print the word more than six letters");
+   System.out.println("enter your choice");
+   int c=Integer.parseInt(r.readLine());
+   System.out.println("Enter the String");
+   String s=r.readLine();
+   
+   switch(c)
+      { //start of switch statment
+       case 1:
+       reverse(s);
+       break;
+          
+       case 2:
+       counter(s);
+       break;
+       
+       case 3:
+       longword(s);
+       break;
+        
+       case 4:
+       maxivow(s);
+       break;
+      
+       case 5:
+       more(s);
+       break;
+       
+       case 6:
+       return;
+           
+       default:
+       System.out.println("Wrong input.");
+      } //end of switch statment
+    
+}
+public static void reverse(String s)
+{ //start of the fuction  reverse
+  s+=" ";
+  int len=s.length();
+   int j=0;
+   for(int i=0;i<len;i++)
+    {
+    if(s.charAt(i)==' '||i==len-1)
+     {
+       for(int k=i;k>=j;k--)
+       {
+       System.out.print(s.charAt(k));
+       }
+       System.out.print(" ");
+      j=i+1;
+      }
+    }
+} //end of the fuction reverse
+
+public static void counter(String s)
+{ //start of the fuction counter
+  int l,j=0,y=0,t=0,diff,sp=0;
+  char chr;
+  l=s.length();
+  for(int i=0;i<l;i++)
+   {
+    chr=s.charAt(i);
+    if(chr>='a'&&chr<='z'||chr>='A'&&chr<='Z')
+    {
+        y++;
+        if(chr=='a'||chr=='e'||chr=='i'||chr=='o'||chr=='u'||chr=='A'||chr=='E'||chr=='I'||chr=='O'||chr=='U')
+            j++;
+    }
+    else
+        sp++;
+    }
+    diff=y-j;
+
+    System.out.println(" NO OF VOWELS..."+j); //printing the vowels.............
+    System.out.println(" NO OF CONSONANT..."+diff); //printing the consonants............
+    System.out.println(" NO OF SPECIAL CHARACTERS..."+sp); //printing the special character...........
+
+    } //end of the fuction counter............
+
+    
+    
+public static void longword(String str)
+    { //start of the fuction longword 
+        int sp=0;
+        int maxlength=0,p1=0,p2=0;
+        str=str+" ";
+        
+        
+        int l=str.length();
+        for(int i=0;i<l;i++)
+        {
+            if(str.charAt(i)==' ')
+                {
+                    if(maxlength<sp) // you want to find out the last longest word then use (maxlength<=sp) other wise it will search the first longest word.
+                    {
+                        
+                        maxlength=sp;
+                        p1=i-sp;
+                        p2=p1+maxlength;
+                       
+                    }
+                 sp=0;   
+                }
+                else
+                {
+                    sp++;
+                }
+        }
+       String s=str.substring(p1,p1+maxlength);
+       System.out.println("The Longest word from the String is : "+s);
+    } //end of the fuction longword.............
+public static void maxivow(String s)
+{ //start of the fuction maxirow..........
+  s+=' ';
+  int len=s.length();
+  int count=0,pos=0,max=0;
+  int j=0;
+  for(int i=0;i<len;i++)
+   {
+   char chr=s.charAt(i);
+   if(chr=='a'||chr=='e'||chr=='i'||chr=='o'||chr=='u')
+   count++;
+    if(chr==' ')
+    {
+    if(count>max)
+    {
+    max=count;
+    pos=j;
+    }
+   j=i+1;
+   count=0;
+}
+}
+    System.out.print(" THE WORD WITH MAXIMUM VOWELS IS..."); //printing the word with maximum vowels...............
+   for(int n=pos;s.charAt(n)!=' ';n++)
+   System.out.print(s.charAt(n));
+   } //end of the fuction maxirow............
+
+
+public static void more(String s)
+{ //start of the fuction more.................
+  s+=' ';
+  int len=s.length();
+  int j=0;
+  System.out.print(" THE WORDS WITH MORE THAN SIX LETTERS ARE...");
+  for(int i=0;i<len;i++)
+   {
+   if(s.charAt(i)==' ')
+   {
+   if(i-j>6)
+   {
+    for(int k=j;k<=i;k++)
+    {
+    System.out.print(s.charAt(k));
+    }
+   }
+  j=i+1;
+  }
+}
+ } //end of the fuction more..............
+ 
+    }// end of class

@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0\stshfdbch0\stshfloch0\stshfhich0\stshfbi0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f37\froman\fcharset238\fprq2 Times New Roman CE;}
+{\f38\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f40\froman\fcharset161\fprq2 Times New Roman Greek;}{\f41\froman\fcharset162\fprq2 Times New Roman Tur;}{\f42\froman\fcharset177\fprq2 Times New Roman (Hebrew);}
+{\f43\froman\fcharset178\fprq2 Times New Roman (Arabic);}{\f44\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f45\froman\fcharset163\fprq2 Times New Roman (Vietnamese);}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;
+\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;
+\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive \ssemihidden 
+Default Paragraph Font;}{\*\ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tscellwidthfts0\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1024\langfe1024\cgrid\langnp1024\langfenp1024 \snext11 \ssemihidden Normal Table;}}{\*\rsidtbl \rsid1135197}{\*\generator Microsoft Word 10.0.2627;}{\info
+{\author sudipta saha }{\operator sudipta saha }{\creatim\yr2010\mo12\dy26\hr12\min26}{\revtim\yr2010\mo12\dy26\hr12\min28}{\version3}{\edmins2}{\nofpages5}{\nofwords1247}{\nofchars7113}{\nofcharsws8344}{\vern16437}}
+\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3\jcompress\viewkind4\viewscale100\nolnhtadjtbl\rsidroot1135197 \fet0\sectd 
+\linex0\sectdefaultcl\sftnbj {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang {\pntxta .}}{\*\pnseclvl4
+\pnlcltr\pnstart1\pnindent720\pnhang {\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}
+{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang {\pntxtb (}{\pntxta )}}\pard\plain 
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\pararsid1135197 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\insrsid1135197\charrsid1135197 import java.io.*; 
+\par  public class reservation \{ InputStreamReader isr=new InputStreamReader (System.in); 
+\par      BufferedReader br=new BufferedReader (isr);
+\par      //System.out.print("Please enter a word");
+\par      int pno[]=new int[275];
+\par      String name[]=new String[275];
+\par      String phno[]=new String[275];
+\par      int age[]=new int[275]; 
+\par      int cl[]=new int[275]; 
+\par      int pcount=0; int pnum=1; 
+\par      int max1=75; int max2=125; 
+\par      int max3=175; 
+\par      public void doMenu() throws Exception
+\par      \{ 
+\par          int cho=0; do 
+\par          \{ 
+\par              System.out.println("\\f"); doHeading(); 
+\par              System.out.println("1.Book ticket"); 
+\par              System.out.println("2.Cancel ticket"); 
+\par              System.out.println("3.Search passenger"); 
+\par              System.out.println("4.Reservation chart"); System.out.println("5.Display unbooked tickets"); 
+\par              System.out.println("6.Exit"); 
+\par              System.out.println("Please enter your choice"); 
+\par              cho=Integer.parseInt(br.readLine()); 
+\par              switch(cho) 
+\par              \{ case 1:doBook(); break; 
+\par                  case 2:doCancel(); break;
+\par                  case 3:doSearch(); break; 
+\par                  case 4:doDispList(); break; 
+\par                  case 5:doDispUnbooked(); break; 
+\par                  case 6:doExit(); break; 
+\par                  default :System.out.println("Invalid choice"); 
+\par                 }{\lang1046\langfe1033\langnp1046\insrsid1135197\charrsid1135197 \} 
+\par                 char e=(char)br.read(); 
+\par             }{\insrsid1135197\charrsid1135197 \}while(cho!=6); 
+\par         \} 
+\par         private void doHeading()throws Exception 
+\par         \{ 
+\par             System.out.println("#########################################################");
+\par              System.out.println("*********Railway Reservation For Kabul Express***********");
+\par             System.out.println("#########################################################"); 
+\par         \}
+\par         private void doBook()throws Exception 
+\par         \{ 
+\par             System.out.println("Please enter the class of ticket"); 
+\par             System.out.println("1. AC\\t 2. First\\t 3. Sleeper\\t"); 
+\par             int c=Integer.parseInt(br.readLine());
+\par             System.out.println("Please enter no. of tickets"); 
+\par             int t=Integer.parseInt(br.readLine()); 
+\par             int ticketAvailable=0;
+\par             if(c==1 && max1==t) 
+\par             \{ 
+\par                 ticketAvailable=1; 
+\par             \} 
+\par             if(c==2 && max2==t) 
+\par             \{ 
+\par                 ticketAvailable=1;
+\par             \} 
+\par             if(c==3 && max3==t) 
+\par             \{ 
+\par                 ticketAvailable=1;
+\par             \} if(ticketAvailable==1) 
+\par             \{
+\par                 for(int i=0;i<t;i++)
+\par                 \{ 
+\par                     pno[pcount]=pnum;
+\par                     System.out.println("Please enter your name");
+\par                     name[pcount]=br.readLine();
+\par                     System.out.println("Please enter your age"); 
+\par                     age[pcount]=Integer.parseInt(br.readLine()); 
+\par                     cl[pcount]=c; System.out.println("Please enter your phno"); 
+\par                     phno[pcount]=br.readLine(); pcount++; pnum++; 
+\par                     System.out.println("Ticket successfully booked"); 
+\par                 \}
+\par                  if(c==1)
+\par                 \{ 
+\par                     max1-=t; System.out.println("Please pay Rs."+t*1500);
+\par                 \} 
+\par                 if(c==2) 
+\par                 \{ max2-=t; System.out.println("Please pay Rs."+t*1200); 
+\par                 \}
+\par                 if(c==3) 
+\par                 \{ max3-=t; System.out.println("Please pay Rs."+t*1000);
+\par                 \} 
+\par             \} 
+\par         \} 
+\par         private void doCancel()throws Exception
+\par         \{ 
+\par             int t_pno[]=new int[275]; 
+\par             String t_name[]=new String[275];
+\par             String t_phno[]=new String[275];
+\par             int t_age[]=new int[275];
+\par             int t_cl[]=new int[275]; 
+\par             int t_pcount=0;
+\par             int passengerFound=0;
+\par             System.out.println("Please enter your passenger no."); 
+\par             int p=Integer.parseInt(br.readLine()); 
+\par             for(int i=0;i<pcount;i++) 
+\par             \{ if(pno[i]!=p) 
+\par                 \{//transfer t_pno[t_pcount]=pno[i];
+\par                     t_name[t_pcount]=name[i];
+\par                     t_phno[t_pcount]=phno[i]; 
+\par                     t_age[t_pcount]=age[i]; 
+\par                     t_cl[t_pcount]=cl[i]; t_pcount++;
+\par                 \} 
+\par                 else 
+\par                 \{ 
+\par                     passengerFound=1; 
+\par                     if(cl[i]==1) 
+\par                     \{ max1++;
+\par                         System.out.println("Please collect refund of Rs."+1800);
+\par                     \}
+\par                     if(cl[i]==2) \{
+\par                         max2++; System.out.println("Please collect refund of Rs."+1500); 
+\par                     \} 
+\par                     if(cl[i]==3)
+\par                     \{ max3++; System.out.println("Please collect refund of Rs."+1000);
+\par                     \}
+\par                     
+\par                     if(passengerFound==1)
+\par                     \{ pno=t_pno;
+\par                         name=t_name; 
+\par                         age=t_age;
+\par                         cl=t_cl; 
+\par                         phno=t_phno; 
+\par                         pcount=t_pcount;
+\par                         System.out.println("ticket successfully cancelled"); \} 
+\par                     \}
+\par                 \}
+\par             \}
+\par                      private void doDispList()throws Exception 
+\par                      \{ System.out.println("Passenger list in AC class"); 
+\par                          System.out.println("pno \\t name \\t\\t age \\t phno"); 
+\par                          for(int i=0;i<pcount;i++) 
+\par                          \{
+\par                              if(cl[i]==1) \{ System.out.println(pno[i]+"\\t"+name[i]+"\\t\\t"+age[i]+"\\t"+phno[i]); \}
+\par                             \} System.out.println("Passenger list in First class"); 
+\par                             System.out.println("pno \\t name \\t\\t age \\t phno"); 
+\par                             for(int i=0;i<pcount;i++)
+\par                             \{ 
+\par                                 if(cl[i]==2) 
+\par                                 \{ System.out.println(pno[i]+"\\t"+name[i]+"\\t\\t"+age[i]+"\\t"+phno[i]);
+\par                                 \} 
+\par                             \} System.out.println("Passenger list in Sleeper class"); 
+\par                             System.out.println("pno \\t name \\t\\t age \\t phno"); 
+\par                             for(int i=0;i<pcount;i++) 
+\par                             \{ 
+\par                                 if(cl[i]==3)
+\par                                 \{ System.out.println(pno[i]+"\\t"+name[i]+"\\t\\t"+age[i]+"\\t"+phno[i]);
+\par                                 \} 
+\par                             \} 
+\par                         \} private void doSearch()throws Exception 
+\par                         \{ 
+\par                             int passengerFound=0; System.out.println("Please enter passenger no. to search");
+\par                             int p=Integer.parseInt(br.readLine()); 
+\par                             for(int i=0;i<pcount;i++) 
+\par                             \{ 
+\par                                 if(pno[i]==p)
+\par                                 \{ System.out.println("Detail found"); 
+\par                                     passengerFound=1;
+\par                                     System.out.println("passenger no.="+pno[i]); 
+\par                                     System.out.println("name="+name[i]);
+\par                                     System.out.println("class="+cl[i]);
+\par                                     System.out.println("phno="+phno[i]);
+\par                                     System.out.println("age="+age[i]); 
+\par                                 \} 
+\par                             \}
+\par                             if(passengerFound==0) System.out.println("No such passenger"); 
+\par                         \} private void doDispUnbooked()throws Exception
+\par                         \{ System.out.println("No. of booked tickets status"); 
+\par                             System.out.println("AC class"+max1);
+\par                             System.out.println("First class"+max2); 
+\par                             System.out.println("Sleeper class"+max3); 
+\par                         \}
+\par                         private void doExit() \{ System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"); 
+\par                             System.out.println("Name : , Class : X, Roll No. :"); 
+\par                             System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+\par                         \} 
+\par                     \}             
+\par             }{\insrsid5646805\charrsid1135197 
+\par }}

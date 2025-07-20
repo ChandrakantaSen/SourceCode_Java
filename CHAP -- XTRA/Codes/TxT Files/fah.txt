@@ -1,0 +1,13 @@
+import java.io.*;
+class fah
+{
+public static void main(String args[])throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+double c,f;
+System.out.println("Enter the temperature in celsius:-");
+c=Double.parseDouble(br.readLine());
+f=c*9/5+32;
+System.out.println("The temperature in fahrenheit="+f);
+}
+} 

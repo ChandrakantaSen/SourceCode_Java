@@ -1,0 +1,51 @@
+/*This program is a calculator program by using static method thus no 
+object have to be created ,as static method gets memory allocation as 
+soon it is decleared also only one copy can only be created as 
+compared to instances where several copies can be created by using
+objects.*/
+class addition
+{
+	static int add(int x,int y)
+	{
+		return(x+y);
+	}
+}
+
+class substraction
+{
+	static int sub(int x,int y)
+	{
+		return(x-y);
+	}
+}
+
+class multiplication
+{
+	static float mul(int x,int y)
+	{
+		return(x*y);
+	}
+}
+
+class division
+{
+	static float div(int x,int y)
+	{
+		return(x/y);
+	}
+}
+
+class cAlculator
+{
+	public static void main(String args[])
+	{
+		int r1=addition.add(5,4);
+		int r2=substraction.sub(5,4);
+		float r3=multiplication.mul(5,4);
+		float r4=division.div(10,2);
+		System.out.println("Result of addition of 5 + 4= " +r1);
+		System.out.println("Result of substraction of 5 - 4= " +r2);
+		System.out.println("Result of multiplication of 5 * 4= " +r3);
+		System.out.println("Result of division of 10 / 2= " +r4);
+	}
+}

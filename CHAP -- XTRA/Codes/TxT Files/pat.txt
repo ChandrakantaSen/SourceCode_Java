@@ -1,0 +1,14 @@
+class pat
+{
+  public static void main(int r)
+    {
+      int i,j;
+      for (i=r;i>=1;i--)
+         {
+           System.out.print("*");
+           for(j=1;j<=i-1;j++)
+              System.out.print(" ");
+              System.out.println("*");
+              }
+              }
+              }

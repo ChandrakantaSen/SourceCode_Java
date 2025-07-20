@@ -1,0 +1,50 @@
+//this program is made by a mentally affected women
+class pat3
+  {
+    public static void main(int n)
+      {
+        
+        int i,j,s;
+        
+        for (i=1;i<=n;i++)
+           {
+           for (s=1;s<=i-1;s++)
+           {
+             System.out.print(" ");
+           }
+           System.out.print("*");
+           for (j=1;j<=(2*(n-i)+n);j++)
+           {
+           if(i==n)
+           
+           System.out.print("*");
+           else 
+           System.out.print(" ");
+           }
+           System.out.println("*");
+           }
+           for (i=n;i>=1;i--)
+           {
+           for (s=1;s<=i-1;s++)
+           {
+             System.out.print(" ");
+           }
+           System.out.print("*");
+           for (j=1;j<=(2*(n-i)+n);j++)
+           {
+           if(i==n)
+           
+           System.out.print("*");
+           else 
+           System.out.print(" ");
+           }
+           System.out.println("*");
+           }
+           }
+           }
+           
+           
+        
+        
+        
+         

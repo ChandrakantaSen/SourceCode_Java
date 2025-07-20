@@ -1,0 +1,24 @@
+import java.io.*;
+class string22
+{
+public static void main(String args[])throws IOException
+{
+String s,k="";
+int i,l,c=0;
+BufferedReader br=new BufferedReader (new InputStreamReader(System.in));
+System.out.println("Enter any text : - ");
+s=br.readLine();
+s=s+" ";
+l=s.length();
+System.out.println("The each extracted words are as follows : - ");
+for(i=0;i<l;i++)
+{
+if(s.charAt(i)==' ')
+{
+k=s.substring(c,i);
+c=i+1;
+System.out.println(k);
+    }
+}
+    }
+}

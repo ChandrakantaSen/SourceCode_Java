@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>PracticeCode</label>
+	</settings>
+	<users>
+		<user>
+			<path>PracticeCode.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>PracticeCode.jcp</path>
+		</project>
+	</projects>
+</workspace>

@@ -1,0 +1,5 @@
+https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html
+https://stackoverflow.com/questions/13792909/java-expand-jbutton-to-fill-container
+
+
+-- how to resize button under container in java swing

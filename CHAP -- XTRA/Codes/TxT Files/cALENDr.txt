@@ -1,0 +1,120 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<dos.h>
+#include<process.h>
+#include<conio.h>
+#include<dos.h>
+class Calendar
+{
+	public:
+	int dd,mm,yy;
+	int leap(int);
+	int decrement(int);
+};
+int Calendar::leap(int u)//scope resolution
+{
+	if(u%100==0 && u%400==0)
+	return 1;
+	else if(u%4==0 && u%100!=0)
+	return 1;
+	else
+	return 0;
+}
+int Calendar::decrement(int v)
+{
+	int wd2=v;
+	  wd2--;
+		if(wd2<0)
+		wd2=6;
+	wd2++;
+	if(wd2>6)
+		return 0;
+	else
+		return wd2;
+}
+void main()
+{
+	clrscr();
+	gotoxy(30,12);
+	int pass=701;
+	int mat;
+//	textcolor(9);
+	  clrscr();
+	//  textcolor(5);
+	  Calendar c;
+	char *Month[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+	int days[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+	cout<<"This a program that generates calender of a entire year"<<endl;
+	cout<<"Enter The Year & then press enter: ";
+	cin>>c.yy;
+	long t=0;
+	int wd;
+	if(c.yy<2006)
+	{
+		for(int m=c.yy;m<2006;m++)
+		{
+		if(c.leap(m)==1)
+			 t+=366;
+		else
+			 t+=365;
+		}
+		wd=0;
+		for(long i=1;i<=t;i++)
+		{
+			wd--;
+			if(wd<0)
+				wd=6;
+		}
+	}
+	else if(c.yy>=2006)
+	{
+		for(int m=2006;m<c.yy;m++)
+		{
+			if(c.leap(m)==1)
+			t+=366;
+			else
+			t+=365;
+		}
+		wd=0;
+		for(long i=1;i<=t;i++)
+		{
+			wd++;
+			if(wd>6)
+				wd=0;
+		}
+	}
+	//textcolor(MAGENTA);
+	cout<<"Generating calendar";
+	  //	  delay(800);
+		for(int p=1;p<5;p++)
+		{
+			cout<<".";
+			//delay(850);
+		}
+		cout<<endl<<endl;
+	int l=c.decrement(wd);
+	for(int q=0;q<12;q++)
+	{
+  //	textattr(q + ((q+1) << 4));
+	cout<<Month[q]<<" "<<c.yy<<endl;
+	cout<<"Su\tMo\tTu\tW\tTh\tFr\tSa"<<endl;
+	  for(int r=0;r<l;r++)
+		cout<<" \t";
+	  for(int i1=1;i1<=days[q];i1++)
+	  {
+			 cout<<i1<<"\t";
+			 l++;
+			 if(l==7)
+			{cout<<endl;l=0;}
+	  }
+	  if(c.leap(c.yy)==1 && q==1)
+		{
+		cout<<"29";l++;
+		if(l==7)
+		l=0;
+		}
+	  cout<<endl<<endl;
+	  //delay(3000);
+	}
+getch();
+}

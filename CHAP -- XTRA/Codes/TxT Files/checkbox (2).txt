@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<meta name="author" content="3261706071">
+
+	<title>Untitled 1</title>
+</head>
+<body>
+<form name="frm1" action="action.php" method="post">
+	Active ?
+	<input type="radio" name="myrdo" value="Y" /> Yes
+	<input type="radio" name="myrdo" value="N" /> No
+	<br />
+	Education:
+	<input type="checkbox" name="mychk" value="G" /> Graduate
+	<br />
+	Country:
+	<select name="country">
+		<option value="" selected="selected">Select</option>
+		<option value="1">USA</option>
+		<option value="2">UK</option>
+		<option value="3">Canada</option>
+	</select>
+	<br />
+	<input type="submit" name="btnSubmit" value="Submit Form" />
+</form>
+</body>
+</html>
+
+And now the actions.php file should look like this where you can see simple validation is done here:
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	$error_msg = array();
+	if(!isset($_POST['myrdo'])){
+		$error_msg[] = "No radio buttons were checked.";
+	}
+	if(!isset($_POST['mychk'])){
+		$error_msg[] = "Graguate was checked";
+	}
+	if(!isset($_POST['country'])){
+		$error_msg[] = "No country as selected.";
+	}
+	
+	if(isset($error_msg) && count($error_msg) == 0){
+		// do some form processing
+	}
+	else{
+		// redirect to the form again.
+	}
+}

@@ -1,0 +1,30 @@
+import java.io.*;
+import java.io.DataInputStream;
+
+  class sixth
+    {
+      public static void main(String ar[])throws Exception
+        {         try{
+           BufferedReader in=new BufferedReader(new InputStreamReader(System.in)) ;
+         char arr[]=new char[10];
+         char ar1[]=new char[10];
+           String s;
+         int r,m;
+         m=0;
+         System.out.print("Enter Name: ");
+         s=in.readLine();
+          r=s.length();
+          for(int i=0;i<r;i++)
+              {
+         arr[i]=s.charAt(i);
+               }
+                       System.out.print("Your Reverse Name Is: ");
+                       for(int j=r-1;j>=0;j--)
+                         {
+                            ar1[m]=arr[j];
+                            m=m+1;
+                         }
+                         System.out.println(ar1);
+                         }catch(Exception e){}
+        }
+    }

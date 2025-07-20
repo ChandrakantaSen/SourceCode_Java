@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace_user>
+	<active_project>
+		<label>PracticeCode</label>
+	</active_project>
+	<projects>
+		<project>
+			<label>PracticeCode</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>src</path>
+			</folderitem>
+			<folderitem>
+				<path>src\Encapsulation-DataHiding</path>
+			</folderitem>
+			<folderitem>
+				<path>src\ThisKeyword</path>
+			</folderitem>
+			<folderitem>
+				<path>src\Inheritence</path>
+			</folderitem>
+			<folderitem>
+				<path>src\FileStreams</path>
+			</folderitem>
+			<fileitem>
+				<path>src\ArrayProblems.java</path>
+				<collapsedfolds>194;120;81;47;25;6;0</collapsedfolds>
+			</fileitem>
+			<fileitem>
+				<path>src\NumericProblems.java</path>
+				<collapsedfolds>117;85;61;44;21;6;0</collapsedfolds>
+			</fileitem>
+		</project>
+	</projects>
+</workspace_user>

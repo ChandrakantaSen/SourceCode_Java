@@ -1,0 +1,99 @@
+import java.io.*;
+class detail
+{
+	String name,address;
+	int tel_no;
+	int rent;
+	//parameterized constructor
+	detail(String n,String a,int t,int r)
+	{
+		/*InputStreamReader read = new InputStreamReader(System.in);
+		BufferedReader in = new BufferedReader(read);
+		name=in.readLine();*/
+		name=n;
+		address=a;
+		tel_no=t;
+		rent=r;
+	}
+	void show()
+	{
+		System.out.println("Name: "+name);
+		System.out.println("address: "+address);
+		System.out.println("tel_no: "+tel_no);
+		System.out.println("rent: "+rent);
+	}
+}
+class Bill extends detail
+{
+	int n_calls;
+	int amt;
+	Bill(String na,String add,int tel_no2,int rent2,int nc)
+	{
+		super(na,add,tel_no2,rent2);
+		n_calls=nc;	
+		amt=0;
+	}
+	void cal()
+	{
+		if(n_calls<=100)
+		{
+			amt=rent;
+		}	
+		else if(n_calls>100 && n_calls<=200)
+		{
+			amt=rent+(n_calls*60);
+		}
+		else if(n_calls>200 && n_calls<=300)
+		{
+			amt=rent+(n_calls*80);
+		}
+		else
+		{
+			amt=rent+(n_calls*100);
+		}
+		//System.out.println("Paid amount: "+ amt);
+	}
+	void show()
+	{
+		super.show();
+		
+		System.out.println("No of calls: "+ n_calls);
+		System.out.println("Paid amount: "+ amt);
+	}
+}
+class inheritance1
+{
+	public static void main(String args[])throws IOException
+	{
+		InputStreamReader read = new InputStreamReader(System.in);
+		BufferedReader in = new BufferedReader(read);
+		
+		String name2,add3;
+		int telno,callno;
+		int rent3;
+		
+		
+		System.out.println("Enter name: ");
+		name2 = in.readLine();
+		System.out.println("Enter address: ");
+		add3 = in.readLine();
+		System.out.println("Enter telno: ");
+		telno =Integer.parseInt(in.readLine());
+		System.out.println("Enter callno: ");
+		callno =Integer.parseInt(in.readLine());
+		System.out.println("Enter rent: ");
+		rent3 =Integer.parseInt(in.readLine());
+		
+		
+		
+		//name2 = "Aditi Bhowmik";
+		//add3 = "Behala";
+		//telno = 1234567890;
+		//rent3 = 250;	
+		//callno = 150;	
+		
+	    Bill ob = new Bill(name2,add3,telno,rent3,callno);
+		ob.cal();
+		ob.show();			
+	}		
+}
